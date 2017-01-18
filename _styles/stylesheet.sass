@@ -1,2 +1,24 @@
+@import "bourbon/bourbon"
+@import "neat/neat"
 @import "fonts"
 @import "default"
+
+
+.container
+  +outer-container()
+
+.sidebar
+  +span-columns(3)
+
+header
+  +span-columns(9)
+
+
+.scroll-on-page-link
+  display: block
+  outline: none
+
+
+
+
+// Based on code by http://codepen.io/xmark/
