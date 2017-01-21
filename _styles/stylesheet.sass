@@ -3,21 +3,29 @@
 @import "fonts"
 @import "default"
 
++display-context(block)
 
 .container
   +outer-container()
 
 .sidebar
-  +span-columns(3)
+  +span-columns(3 of 12)
 
 header
-  +span-columns(9)
+  +span-columns(9 of 12)
+  +omega()
 
 
 .scroll-on-page-link
   display: block
   outline: none
 
+img.ad
+  +reset-display()
+  +span-columns(3 of 12)
+
+img.adThree
+  +omega()
 
 
 

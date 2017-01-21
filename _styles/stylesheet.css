@@ -30,12 +30,24 @@ header {
   float: left;
   display: block;
   margin-right: 2.35765%;
-  width: 74.41059%; }
+  width: 74.41059%;
+  margin-right: 0; }
   header:last-child {
     margin-right: 0; }
 
 .scroll-on-page-link {
   display: block;
   outline: none; }
+
+img.ad {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 23.23176%; }
+  img.ad:last-child {
+    margin-right: 0; }
+
+img.adThree {
+  margin-right: 0; }
 
 /*# sourceMappingURL=stylesheet.css.map */
