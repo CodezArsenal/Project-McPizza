@@ -47,6 +47,9 @@ $(document).ready(function(){
 	});
 
 
+	$(function(){
+		$('#pizzaCarousel').carousel();
+	});
 
 });
 

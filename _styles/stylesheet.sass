@@ -1,31 +1,99 @@
 @import "bourbon/bourbon"
-@import "neat/neat"
+//@import "neat/neat"
 @import "fonts"
 @import "default"
+@import "mixins"
 
-+display-context(block)
+$greyDark: #404343
 
-.container
-  +outer-container()
+=test()
+  border: 1px solid crimson
+
+.container-fluid
+  padding: 0
+  margin: 0
 
 .sidebar
-  +span-columns(3 of 12)
 
 header
-  +span-columns(9 of 12)
-  +omega()
+
+#pizzaCarousel
+  .carousel-inner
+    .item
+      img
+        filter: blur(3px)
+        //+center
+        //todo active not blurred
+        //todo edit carousel style
 
 
 .scroll-on-page-link
   display: block
   outline: none
 
-img.ad
-  +reset-display()
-  +span-columns(3 of 12)
+.callOuts
+  height: 300px
+  .ad
+    position: relative
+    img
+      +center-h
 
-img.adThree
-  +omega()
+
+
+
+footer.col-md-12, footer.col-sm-12
+  padding: 0
+footer
+  padding: 0
+  height: 450px
+  overflow: hidden
+  .map
+    padding: 0
+    iframe
+      width: 100%
+      height: 450px
+  .contactUs
+    padding: 10px 0 25px
+    height: 450px
+    background-color: $greyDark
+    //height: 450px
+    .contactUsTitle
+      color: white
+      font-family: Impact, sans-serif
+      letter-spacing: 1.5px
+      font-size: 2.5em
+      //padding: 0 20px
+      .icon
+        width: 70px
+        margin: 0 20px 0 30px
+    .contactUsTitle.Landline
+      margin: 5px 30px 5px 120px
+    .contactUsText
+      color: white
+      font-family: Gurmukhi MN, sans-serif
+      font-weight: lighter
+      font-size: 20px
+      margin: 5px 30px 5px 120px
+      //todo change to a suitable font
+
+    .contactUsBreak
+      border-bottom: 1px solid #95989A
+      margin: 30px 0 30px 120px
+      width: 250px
+    .contactUsBreak:nth-child(2)
+      //margin-bottom: 10px
+      //todo edith margins like mockup
+    .socialMedia
+      padding: 0 60px
+      margin: -30px 0 0 0
+      .icon
+        float: right
+        padding: 5px
+
+
+
+
+
 
 
 
