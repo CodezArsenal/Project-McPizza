@@ -5,23 +5,35 @@
 
 .container-fluid {
   padding: 0;
-  margin: 0; }
+  margin: 0;
+  background-image: radial-gradient(closest-side, #FF7F32, #e60000 750px); }
 
 #pizzaCarousel .carousel-inner .item img {
   filter: blur(3px); }
+#pizzaCarousel .carousel-inner .item.active img {
+  filter: none;
+  height: 300px;
+  width: 360px; }
+#pizzaCarousel .carousel-inner a.carousel-control {
+  background: none; }
 
 .scroll-on-page-link {
   display: block;
   outline: none; }
 
-.callOuts {
-  height: 300px; }
-  .callOuts .ad {
+section.callOuts {
+  height: 160px;
+  padding: 30px 0; }
+  section.callOuts .ad {
     position: relative; }
-    .callOuts .ad img {
+    section.callOuts .ad img {
       position: absolute;
       left: 50%;
       transform: translateX(-50%); }
+
+section.orderOnline {
+  height: 400px;
+  background-color: #8c8c8c; }
 
 footer.col-md-12, footer.col-sm-12 {
   padding: 0; }
