@@ -6,39 +6,62 @@
 
 $greyDark: #404343
 
+
 =test()
   border: 1px solid crimson
 
 .container-fluid
   padding: 0
   margin: 0
-
+  //background-image: radial-gradient(closest-side, #f7931e, #f15a24 750px)
+  background-image: radial-gradient(closest-side, #FF7F32, #e60000 750px)
 .sidebar
 
 header
 
 #pizzaCarousel
   .carousel-inner
+    /*.item.next
+      left: 40%*/
+    /*.item.prev
+      left: -40%*/
     .item
+      max-width: 400px
+      display: inline
       img
+        margin: 0
+        display: inline
         filter: blur(3px)
+        transition: width .6s ease-in-out
+        transition: height .6s ease-in-out
         //+center
         //todo active not blurred
         //todo edit carousel style
+    .item.active
+      img
+        filter: none
+        height: 300px
+        width: 360px
+    a.carousel-control
+      background: none
 
 
 .scroll-on-page-link
   display: block
   outline: none
 
-.callOuts
-  height: 300px
+section.callOuts
+  height: 160px
+  padding: 30px 0
   .ad
     position: relative
     img
-      +center-h
+      +center-h()
 
 
+section.orderOnline
+  height: 400px
+  background-color: #8c8c8c
 
 
 footer.col-md-12, footer.col-sm-12

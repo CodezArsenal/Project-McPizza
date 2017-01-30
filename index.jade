@@ -11,7 +11,7 @@ html
 		script(type='text/javascript' src='_js/app.js')
 
 		link(rel='stylesheet' type='text/css' href='_assets/lib/normalize.css')
-		link(rel='stylesheet' type='text/css' href='_assets/lib/bootstrap-3.3.7-dist/css/bootstrap.min.css')
+		link(rel='stylesheet' type='text/css' href='_assets/lib/bootstrap-3.3.7-dist/css/bootstrapEdited.css')
 		link(rel='stylesheet' type='text/css' href='_styles/stylesheet.css')
 		//todo on deployment only use minified files and customize bootsrap
 
@@ -35,11 +35,11 @@ html
 				.pizzaCarousel
 					.carousel.slide#pizzaCarousel(data-ride="carousel")
 						.carousel-inner(role='listbox')
-							.item.active
+							.item.active.center-block
 								img.center-block(src='_assets/img/images/pizzaTray.png' width= carouselItemWidth height= carouselItemHeight)
-							.item
+							.item.center-block
 								img.center-block(src='_assets/img/images/pizzaTray.png' width= carouselItemWidth height= carouselItemHeight)
-							.item
+							.item.center-block
 								img.center-block(src='_assets/img/images/pizzaTray.png' width= carouselItemWidth height= carouselItemHeight)
 
 							a.left.carousel-control(href='#pizzaCarousel' role='button' data-slide='prev')
