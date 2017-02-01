@@ -10,6 +10,7 @@ html
 		script(type='text/javascript' src='_assets/lib/bootstrap-3.3.7-dist/js/bootstrap.min.js')
 		script(type='text/javascript' src='_js/app.js')
 
+
 		link(rel='stylesheet' type='text/css' href='_assets/lib/normalize.css')
 		link(rel='stylesheet' type='text/css' href='_assets/lib/bootstrap-3.3.7-dist/css/bootstrap.min.css')
 		link(rel='stylesheet' type='text/css' href='_styles/stylesheet.css')
@@ -60,6 +61,18 @@ html
 				.ad.col-md-4
 					img(src="ad.png" width= adWidth height= adHeight)
 			section.orderOnline.col-md-12
+				script#handlebarsTemp(type='text/handlebars-template')
+					ul#menu
+						| {{#menu}}
+						li
+							ul(id='{{category}}')
+								h3 {{category}}
+								| {{#dishes}}
+								li {{name}}:
+									span {{description}} {{price_med}} {{price_lrg}}
+								| {{/dishes}}
+						| {{/menu}}
+
 			footer.col-lg-12.col-md-12.col-sm-12
 				.map.col-md-6
 					iframe(src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d28125.328536815286!2d54.553012925649874!3d24.371639600641778!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x5cce3e228d0bfd19!2sAbu+Dhabi+University!5e0!3m2!1sen!2sae!4v1485120229285', width='600', height='450', frameborder='0', style='border:0', allowfullscreen='')
@@ -83,6 +96,12 @@ html
 						a.icon(href='#')
 							img(src='_assets/img/elements/instagram.png' width='30px')
 
-					
+		//script#menuJSON(type='application/json' src='menu.json')
+		script(type='text/javascript' src='_assets/lib/handlebars-v4.0.5.js')
+		script(type='text/javascript' src='_js/handlebarsTasks.js')
+
+
+					//todo adding copyrights
+
 
 
