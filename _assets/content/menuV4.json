@@ -1,4 +1,4 @@
-[
+{"menu": [
   {"name": "original pizza", "children": [
     {
       "name": "Margherita",
@@ -220,4 +220,4 @@
       "ingredients": ""
     }
   ]}
-]
+]}

@@ -65,12 +65,12 @@ html
 					ul#menu
 						| {{#menu}}
 						li
-							ul(id='{{category}}')
-								h3 {{category}}
-								| {{#dishes}}
+							ul(id='{{name}}')
+								h3 {{name}}
+								| {{#children}}
 								li {{name}}:
 									span  {{ingredients}} {{price}}
-								| {{/dishes}}
+								| {{/children}}
 						| {{/menu}}
 
 			footer.col-lg-12.col-md-12.col-sm-12
