@@ -51,6 +51,31 @@ $(document).ready(function(){
 		$('#pizzaCarousel').carousel();
 	});
 
+
+	var position = $(".categoryList h3").position(); //Position of the header in the webpage
+	var paddingTop = 0;
+	var paddingLeft = 10; //Padding set to the header
+	var left = position.left + paddingLeft;
+	var top = position.top + paddingTop;
+	$(".categoryList h3").find("span").css("background-position","-"+left+"px -"+top+"px");
+	//todo work on aligning the backgrounds of the text and the body
+	//todo use svg on V2
+
+	$('.meal').hover(function(){
+		$(this).next().next().css('display', 'block').addClass('animated').hover(
+			function(){
+				$(this).css('display', 'block');
+			},
+			function(){
+				$(this).css('display', 'none');
+			}
+		);
+	},
+	function(){
+		$(this).next().next().css('display', 'none').removeClass('animated');
+	})
+
+
 });
 
 

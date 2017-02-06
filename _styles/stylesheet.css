@@ -32,8 +32,44 @@ section.callOuts {
       transform: translateX(-50%); }
 
 section.orderOnline {
-  height: 400px;
-  background-color: #8c8c8c; }
+  height: 800px; }
+  section.orderOnline ul li {
+    list-style: none; }
+  section.orderOnline .categoryList {
+    padding: 20px 0;
+    height: 200px;
+    /*.meal:hover + .price + .ingredients
+     * color: white
+     * display: block */ }
+    section.orderOnline .categoryList h3 {
+      display: inline-block;
+      background-color: white;
+      padding: 0 10px;
+      color: transparent;
+      font-family: Impact;
+      font-variant: small-caps;
+      font-size: 32px;
+      box-shadow: 0 1px 1px 1px black;
+      -webkit-transform: skew(-20deg);
+      -moz-transform: skew(-20deg);
+      -o-transform: skew(-20deg);
+      transform: skew(-20deg);
+      position: relative; }
+      section.orderOnline .categoryList h3 span {
+        background-image: radial-gradient(closest-side, #FF7F32, #e60000 750px);
+        background-attachment: fixed;
+        -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
+        display: block;
+        position: relative;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -15%); }
+    section.orderOnline .categoryList li.meal span.glyphicon {
+      padding: 5px; }
+    section.orderOnline .categoryList li.ingredients {
+      display: none;
+      padding: 5px 15px 10px 30px; }
 
 footer.col-md-12, footer.col-sm-12 {
   padding: 0; }

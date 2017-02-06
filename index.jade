@@ -13,6 +13,7 @@ html
 
 		link(rel='stylesheet' type='text/css' href='_assets/lib/normalize.css')
 		link(rel='stylesheet' type='text/css' href='_assets/lib/bootstrap-3.3.7-dist/css/bootstrap.min.css')
+		link(rel='stylesheet' type='text/css' href='_assets/lib/animate.css')
 		link(rel='stylesheet' type='text/css' href='_styles/stylesheet.css')
 		//todo on deployment only use minified files and customize bootsrap
 
@@ -65,11 +66,16 @@ html
 					ul#menu
 						| {{#menu}}
 						li
-							ul(id='{{name}}')
-								h3 {{name}}
+							ul(id='{{name}}').categoryList.col-md-3
+								h3
+									span {{name}}
 								| {{#children}}
-								li {{name}}:
-									span  {{ingredients}} {{price}}
+								li
+								li.meal.col-md-7
+									span.addBtn.glyphicon.glyphicon-plus
+									| {{name}}
+								li.price.col-md-5 {{price}} Dhs
+								li.ingredients.col-md-12.slideInDown  {{ingredients}}
 								| {{/children}}
 						| {{/menu}}
 
