@@ -21,19 +21,21 @@ html
 
 	body
 		.container-fluid
-			.sidebar.col-md-3
+			.sidebar.col-md-2
 				.logo
-					img(src="_assets/img/images/pizzaTray.png" width= '150px')
-					h1.title Napolitano
+					img(src="_assets/img/images/pizzaTray.png" width= '150px').center-block
+					h1.title.text-center Napolitano
 				nav
-					ul
+					img(src='_assets/img/elements/ribbon.png' width='140px').center-block
+					ul.center-block
 						li
 							a(href="#1").scroll-on-page-link Our Best Dishes
 						li
 							a(href="#2").scroll-on-page-link Order Online
 						li
 							a(href="#3").scroll-on-page-link Contact us
-			header.col-md-9
+							//todo complete add the links here
+			header.col-md-10
 				.pizzaCarousel
 					.carousel.slide#pizzaCarousel(data-ride="carousel")
 						.carousel-inner(role='listbox')
@@ -51,7 +53,7 @@ html
 								span.glyphicon.glyphicon-chevron-right(aria-hidden='true')
 								span.sr-only Next
 
-				h2.headerText Did you taste our  Margherita Pizza?!
+				h2.headerText Did you taste our  Margherita Pizza ?!
 				h3.callUsText Call us on 02-5559744
 			section.callOuts.col-md-9.col-md-offset-3
 				//todo fix browser-sync display: none bug

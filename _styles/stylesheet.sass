@@ -5,19 +5,66 @@
 @import "mixins"
 
 $greyDark: #404343
+$redDark: #e60000
 
 =test()
-  border: 1px solid crimson
+  border: 1px solid chartreuse
 
 .container-fluid
   padding: 0
   margin: 0
   //background-image: radial-gradient(closest-side, #f7931e, #f15a24 750px)
   background-image: radial-gradient(closest-side, #FF7F32, #e60000 750px)
+
 .sidebar
+  .logo
+    h1.title
+      padding: 0 0 20px 0
+      margin: 0
+      font-variant: all-small-caps
+      font-family: Trattatello
+      font-size: 42px
+
+  nav
+    position: relative
+    img
+    ul
+      padding: 0
+      margin: 0
+      list-style: none
+      font-size: 14px
+      font-family: "Snell Roundhand"
+      font-weight: bolder
+      position: absolute
+      text-decoration: none
+      +center()
+      top: 40%
+      li
+        margin: 20px 0
+        text-align: center
+      li:hover
+      a
+        text-decoration: none
+        color: $redDark
+      a:hover
+        text-decoration: none
+        font-size: 1.3em
+      a:visited
+        text-decoration: none
+
+
 
 header
-
+  .headerText
+    padding: 15px
+    font-family: "Snell Roundhand"
+    font-size: 42px
+    font-weight: bolder
+    text-align: center
+  .callUsText
+    font-family: Impact
+    font-size: 32px
+    text-align: center
 #pizzaCarousel
   .carousel-inner
     .item
@@ -33,6 +80,7 @@ header
         width: 360px
     a.carousel-control
       background: none
+
 
 
 .scroll-on-page-link
@@ -86,6 +134,7 @@ section.orderOnline
 
 
     li.meal
+      //todo edit the fonts
       span.glyphicon
         padding: 5px
 
