@@ -8,14 +8,96 @@
   margin: 0;
   background-image: radial-gradient(closest-side, #FF7F32, #e60000 750px); }
 
-#pizzaCarousel .carousel-inner .item img {
-  filter: blur(3px); }
-#pizzaCarousel .carousel-inner .item.active img {
-  filter: none;
-  height: 300px;
-  width: 360px; }
-#pizzaCarousel .carousel-inner a.carousel-control {
-  background: none; }
+.sidebar .logo h1.title {
+  padding: 0 0 20px 0;
+  margin: 0;
+  font-variant: all-small-caps;
+  font-family: Trattatello;
+  font-size: 42px; }
+.sidebar nav {
+  position: relative; }
+  .sidebar nav ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    font-size: 14px;
+    font-family: "Snell Roundhand";
+    font-weight: bolder;
+    position: absolute;
+    text-decoration: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    top: 40%; }
+    .sidebar nav ul li {
+      margin: 20px 0;
+      text-align: center; }
+    .sidebar nav ul a {
+      text-decoration: none;
+      color: #e60000; }
+    .sidebar nav ul a:hover {
+      text-decoration: none;
+      font-size: 1.3em; }
+    .sidebar nav ul a:visited {
+      text-decoration: none; }
+
+header {
+  margin-bottom: 50px; }
+  header .headerText {
+    padding: 15px;
+    margin: 50px 0 30px 0;
+    font-family: "Snell Roundhand";
+    font-size: 42px;
+    font-weight: bolder;
+    text-align: center; }
+  header .callUsText {
+    font-family: Impact;
+    font-size: 38px;
+    text-align: center;
+    margin: 0; }
+
+#pizzaCarousel .mcPizza-inner {
+  width: 800px;
+  padding: 30px 10px;
+  height: 400px;
+  position: relative; }
+  #pizzaCarousel .mcPizza-inner .slick-arrow {
+    top: 85%;
+    z-index: 11; }
+  #pizzaCarousel .mcPizza-inner .slick-prev {
+    left: 130px; }
+  #pizzaCarousel .mcPizza-inner .slick-next {
+    right: 130px; }
+  #pizzaCarousel .mcPizza-inner .slick-list .slick-track {
+    height: 400px; }
+    #pizzaCarousel .mcPizza-inner .slick-list .slick-track .slick-slide img {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      position: relative;
+      top: 25%;
+      filter: blur(3px); }
+    #pizzaCarousel .mcPizza-inner .slick-list .slick-track .activeStyle {
+      z-index: 10;
+      position: relative; }
+      #pizzaCarousel .mcPizza-inner .slick-list .slick-track .activeStyle img {
+        width: 360px;
+        height: 300px;
+        filter: none;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        position: relative;
+        top: 25%; }
+    #pizzaCarousel .mcPizza-inner .slick-list .slick-track .firstLevelStyle img {
+      top: 40%; }
+    #pizzaCarousel .mcPizza-inner .slick-list .slick-track .secondLevelStyle img {
+      top: 30%; }
+    #pizzaCarousel .mcPizza-inner .slick-list .slick-track .secondLevelStyle.left img {
+      left: 60%; }
+    #pizzaCarousel .mcPizza-inner .slick-list .slick-track .secondLevelStyle.right img {
+      left: 40%; }
 
 .scroll-on-page-link {
   display: block;
@@ -32,8 +114,41 @@ section.callOuts {
       transform: translateX(-50%); }
 
 section.orderOnline {
-  height: 400px;
-  background-color: #8c8c8c; }
+  height: 800px; }
+  section.orderOnline ul li {
+    list-style: none; }
+  section.orderOnline .categoryList {
+    padding: 20px 0;
+    height: 200px; }
+    section.orderOnline .categoryList h3 {
+      display: inline-block;
+      background-color: white;
+      padding: 0 10px;
+      color: transparent;
+      font-family: Impact;
+      font-variant: small-caps;
+      font-size: 32px;
+      box-shadow: 0 1px 1px 1px black;
+      -webkit-transform: skew(-20deg);
+      -moz-transform: skew(-20deg);
+      -o-transform: skew(-20deg);
+      transform: skew(-20deg);
+      position: relative; }
+      section.orderOnline .categoryList h3 span {
+        background-image: radial-gradient(closest-side, #FF7F32, #e60000 750px);
+        background-attachment: fixed;
+        -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
+        display: block;
+        position: relative;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -15%); }
+    section.orderOnline .categoryList li.meal span.glyphicon {
+      padding: 5px; }
+    section.orderOnline .categoryList li.ingredients {
+      display: none;
+      padding: 5px 15px 10px 30px; }
 
 footer.col-md-12, footer.col-sm-12 {
   padding: 0; }

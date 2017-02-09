@@ -5,35 +5,115 @@
 @import "mixins"
 
 $greyDark: #404343
+$redDark: #e60000
 
 =test()
-  border: 1px solid crimson
+  border: 1px solid chartreuse
 
 .container-fluid
   padding: 0
   margin: 0
   //background-image: radial-gradient(closest-side, #f7931e, #f15a24 750px)
   background-image: radial-gradient(closest-side, #FF7F32, #e60000 750px)
+
 .sidebar
+  .logo
+    h1.title
+      padding: 0 0 20px 0
+      margin: 0
+      font-variant: all-small-caps
+      font-family: Trattatello
+      font-size: 42px
+
+  nav
+    position: relative
+    ul
+      padding: 0
+      margin: 0
+      list-style: none
+      font-size: 14px
+      font-family: "Snell Roundhand"
+      font-weight: bolder
+      position: absolute
+      text-decoration: none
+      +center()
+      top: 40%
+      li
+        margin: 20px 0
+        text-align: center
+      li:hover
+      a
+        text-decoration: none
+        color: $redDark
+      a:hover
+        text-decoration: none
+        font-size: 1.3em
+      a:visited
+        text-decoration: none
+
+
 
 header
+  margin-bottom: 50px
+  .headerText
+    padding: 15px
+    margin: 50px 0 30px 0
+    font-family: "Snell Roundhand"
+    font-size: 42px
+    font-weight: bolder
+    text-align: center
+  .callUsText
+    font-family: Impact
+    font-size: 38px
+    text-align: center
+    margin: 0
+
+
 
 #pizzaCarousel
-  .carousel-inner
-    .item
-      img
-        filter: blur(3px)
-        //+center
-        //todo active not blurred
-        //todo edit carousel style
-    .item.active
-      img
-        filter: none
-        height: 300px
-        width: 360px
-    a.carousel-control
-      background: none
-
+  .mcPizza-inner
+    width: 800px
+    padding: 30px 10px
+    height: 400px
+    position: relative
+    .slick-arrow
+      top: 85%
+      z-index: 11
+    .slick-prev
+      left: 130px
+    .slick-next
+      right: 130px
+    .slick-list
+      .slick-track
+        height: 400px
+        .slick-slide
+          img
+            +center-h()
+            position: relative
+            top: 25%
+            filter: blur(3px)
+        .activeStyle
+          z-index: 10
+          position: relative
+          img
+            width: 360px
+            height: 300px
+            filter: none
+            +center-h()
+            position: relative
+            top: 25%
+        .firstLevelStyle
+          img
+            top: 40%
+        .secondLevelStyle
+          img
+            top: 30%
+        .secondLevelStyle.left
+          img
+            left: 60%
+        .secondLevelStyle.right
+          img
+            left: 40%
 
 .scroll-on-page-link
   display: block
@@ -48,8 +128,57 @@ section.callOuts
       +center-h()
 
 section.orderOnline
-  height: 400px
-  background-color: #8c8c8c
+  height: 800px
+  //background-color: #8c8c8c
+  ul
+    li
+      list-style: none
+  .categoryList
+    padding: 20px 0
+    height: 200px
+    h3
+      display: inline-block
+      background-color: white
+      padding: 0 10px
+      color: transparent
+      font-family: Impact
+      font-variant: small-caps
+      font-size: 32px
+      box-shadow: 0 1px 1px 1px black
+      -webkit-transform: skew(-20deg)
+      -moz-transform: skew(-20deg)
+      -o-transform: skew(-20deg)
+      transform: skew(-20deg)
+      position: relative
+      span
+        background-image: radial-gradient(closest-side, #FF7F32, #e60000 750px)
+        background-attachment: fixed
+        -webkit-text-fill-color: transparent
+        -webkit-background-clip: text
+        display: block
+        //todo text shouldn't be skewed
+        position: relative
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -15%)
+        //todo text-shadow: 0 1px 0 black inset
+
+
+
+    li.meal
+      //todo edit the fonts
+      span.glyphicon
+        padding: 5px
+
+    li.price
+
+    li.ingredients
+      display: none
+      padding: 5px 15px 10px 30px
+
+
+
+
 
 footer.col-md-12, footer.col-sm-12
   padding: 0

@@ -1,0 +1,62 @@
+ {"categories": [
+  {"category" : "Original pizza",
+    "contents": [
+    {"name": "Pizza Margherita", 
+      "description": "cheese, tomatoes, fresh whatever",
+      "price_med": 20,
+      "price_lrg": 35},
+    {"name": "Quattro Fromagi",
+      "description": "Tomato Sauce, blue cheese, mozzarella cheese, feta, cheese",
+      "price_med": 20,
+      "price_lrg": 35}]},
+  {"category": "Pasta ", 
+    "contents": [
+    {"name": "Spaghetti Bolognese",
+      "description": "mince meat, sauce, parmesan cheese",
+      "price_med": 30},
+    {"name": "Penne Arrabiata",
+      "description": "tomato sauce, vegetables, olive oil",
+      "price_lrg": 35}
+   ]},
+  {"category" : "Italian Risotto",
+    "contents": [
+    {"name": "Pizza Margherita", 
+      "description": "cheese, tomatoes, fresh whatever",
+      "price_med": 20,
+      "price_lrg": 35},
+    {"name": "Quattro Fromagi",
+      "description": "Tomato Sauce, blue cheese, mozzarella cheese, feta, cheese",
+      "price_med": 20,
+      "price_lrg": 35}]},
+  {"category": "Sandwiches ", 
+    "contents": [
+    {"name": "Spaghetti Bolognese",
+      "description": "mince meat, sauce, parmesan cheese",
+      "price_med": 30},
+    {"name": "Penne Arrabiata",
+      "description": "tomato sauce, vegetables, olive oil",
+      "price_lrg": 35}
+   ]},
+  {"category" : "Salads",
+    "contents": [
+    {"name": "Pizza Margherita", 
+      "description": "cheese, tomatoes, fresh whatever",
+      "price_med": 20,
+      "price_lrg": 35},
+    {"name": "Quattro Fromagi",
+      "description": "Tomato Sauce, blue cheese, mozzarella cheese, feta, cheese",
+      "price_med": 20,
+      "price_lrg": 35}]},
+  {"category": "Juices ", 
+    "contents": [
+    {"name": "Spaghetti Bolognese",
+      "description": "mince meat, sauce, parmesan cheese",
+      "price_med": 30},
+    {"name": "Penne Arrabiata",
+      "description": "tomato sauce, vegetables, olive oil",
+      "price_lrg": 35}
+   ]}
+
+]}
+
+  
