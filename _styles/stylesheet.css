@@ -42,25 +42,62 @@
     .sidebar nav ul a:visited {
       text-decoration: none; }
 
-header .headerText {
-  padding: 15px;
-  font-family: "Snell Roundhand";
-  font-size: 42px;
-  font-weight: bolder;
-  text-align: center; }
-header .callUsText {
-  font-family: Impact;
-  font-size: 32px;
-  text-align: center; }
+header {
+  margin-bottom: 50px; }
+  header .headerText {
+    padding: 15px;
+    margin: 50px 0 30px 0;
+    font-family: "Snell Roundhand";
+    font-size: 42px;
+    font-weight: bolder;
+    text-align: center; }
+  header .callUsText {
+    font-family: Impact;
+    font-size: 38px;
+    text-align: center;
+    margin: 0; }
 
-#pizzaCarousel .carousel-inner .item img {
-  filter: blur(3px); }
-#pizzaCarousel .carousel-inner .item.active img {
-  filter: none;
-  height: 300px;
-  width: 360px; }
-#pizzaCarousel .carousel-inner a.carousel-control {
-  background: none; }
+#pizzaCarousel .mcPizza-inner {
+  width: 800px;
+  padding: 30px 10px;
+  height: 400px;
+  position: relative; }
+  #pizzaCarousel .mcPizza-inner .slick-arrow {
+    top: 85%;
+    z-index: 11; }
+  #pizzaCarousel .mcPizza-inner .slick-prev {
+    left: 130px; }
+  #pizzaCarousel .mcPizza-inner .slick-next {
+    right: 130px; }
+  #pizzaCarousel .mcPizza-inner .slick-list .slick-track {
+    height: 400px; }
+    #pizzaCarousel .mcPizza-inner .slick-list .slick-track .slick-slide img {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      position: relative;
+      top: 25%;
+      filter: blur(3px); }
+    #pizzaCarousel .mcPizza-inner .slick-list .slick-track .activeStyle {
+      z-index: 10;
+      position: relative; }
+      #pizzaCarousel .mcPizza-inner .slick-list .slick-track .activeStyle img {
+        width: 360px;
+        height: 300px;
+        filter: none;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        position: relative;
+        top: 25%; }
+    #pizzaCarousel .mcPizza-inner .slick-list .slick-track .firstLevelStyle img {
+      top: 40%; }
+    #pizzaCarousel .mcPizza-inner .slick-list .slick-track .secondLevelStyle img {
+      top: 30%; }
+    #pizzaCarousel .mcPizza-inner .slick-list .slick-track .secondLevelStyle.left img {
+      left: 60%; }
+    #pizzaCarousel .mcPizza-inner .slick-list .slick-track .secondLevelStyle.right img {
+      left: 40%; }
 
 .scroll-on-page-link {
   display: block;
@@ -82,10 +119,7 @@ section.orderOnline {
     list-style: none; }
   section.orderOnline .categoryList {
     padding: 20px 0;
-    height: 200px;
-    /*.meal:hover + .price + .ingredients
-     * color: white
-     * display: block */ }
+    height: 200px; }
     section.orderOnline .categoryList h3 {
       display: inline-block;
       background-color: white;
