@@ -128,7 +128,9 @@ $(document).ready(function(){
 					arrows: false,
 					centerMode: true,
 					centerPadding: '40px',
-					slidesToShow: 3
+					slidesToShow: 3,
+					focusOnSelect: false,
+					draggable: false
 				}
 			},
 			{
@@ -137,7 +139,9 @@ $(document).ready(function(){
 					arrows: false,
 					centerMode: true,
 					centerPadding: '40px',
-					slidesToShow: 1
+					slidesToShow: 1,
+					focusOnSelect: false,
+					draggable: false
 				}
 			}
 		]

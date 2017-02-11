@@ -114,12 +114,22 @@ section.callOuts {
       transform: translateX(-50%); }
 
 section.orderOnline {
-  height: 800px; }
+  height: 1600px; }
   section.orderOnline ul li {
     list-style: none; }
+  section.orderOnline ul#menu {
+    display: flex;
+    -ms-flex-direction: row;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    -ms-flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap; }
   section.orderOnline .categoryList {
     padding: 20px 0;
-    height: 200px; }
+    width: 300px; }
     section.orderOnline .categoryList h3 {
       display: inline-block;
       background-color: white;

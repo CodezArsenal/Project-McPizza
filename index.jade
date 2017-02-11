@@ -85,17 +85,17 @@ html
 					ul#menu
 						| {{#menu}}
 						li
-							ul(id='{{name}}').categoryList.col-md-3
+							ul(id='{{category}}').categoryList
 								h3
-									span {{name}}
-								| {{#children}}
+									span {{category}}
+								| {{#dishes}}
 								li
 								li.meal.col-md-7
 									span.addBtn.glyphicon.glyphicon-plus
 									| {{name}}
 								li.price.col-md-5 {{price}} Dhs
 								li.ingredients.col-md-12.slideInDown  {{ingredients}}
-								| {{/children}}
+								| {{/dishes}}
 						| {{/menu}}
 
 			footer.col-lg-12.col-md-12.col-sm-12

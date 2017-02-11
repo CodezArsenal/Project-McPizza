@@ -6,9 +6,9 @@ var template = Handlebars.compile(source);
 //var menu = JSON.parse(document.getElementById('menuJSON').textContent);
 var menu = Object;
 
-$.getJSON('_assets/content/menuV4.json',function(data){
+$.getJSON('_assets/content/menuV5.json',function(data){
 	//console.log('success');
-	console.log(data);
+	console.log(data);//todo remove console.log statements
 	menu = data;
 
 	var html = template(menu);

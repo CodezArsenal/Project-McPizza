@@ -1,0 +1,579 @@
+{
+  "menu": [
+    {
+      "category": "original pizza",
+      "dishes": [
+        {
+          "name": "Margherita",
+          "price": "20/30",
+          "ingredients": "Tomato Sauce, Mozzarella Cheese"
+        },
+        {
+          "name": "Quattro Fromagi",
+          "price": "30/40",
+          "ingredients": "Tomato Sauce, Mozzarella Cheese, Blue Cheese, Feta Cheese, Parmesan Cheese"
+        },
+        {
+          "name": "Quattro Stegioni",
+          "price": "25/35",
+          "ingredients": "Tomato Sauce, Mozzarella Cheese, Beef Slices, Artichoke, Mushrooms"
+        },
+        {
+          "name": "Pizza Spinaci",
+          "price": "25/35",
+          "ingredients": "Tomato Sauce, Mozzarella Cheese, Feta Cheese, Spinach"
+        },
+        {
+          "name": "Pizza Vegetariana",
+          "price": "25/35",
+          "ingredients": "Tomato Sauce, Mozzarella Cheese, Fresh Vegetable"
+        },
+        {
+          "name": "Pizza Viennese",
+          "price": "25/35",
+          "ingredients": "Tomato Sauce, Mozzarella Cheese, German Sausage, Oregano"
+        },
+        {
+          "name": "Pizza Capricciosa",
+          "price": "25/35",
+          "ingredients": "Tomato Sauce, Mozzarella Cheese, Mushrooms, Artichokes, Olives, Cooked Ham"
+        }
+      ]
+    },
+    {
+      "category": "chicken pizza",
+      "dishes": [
+        {
+          "name": "Pollo Pinccante Pizza",
+          "price": "25/35",
+          "ingredients": "Yomati Sauce, Mozzarella Cheese, Spiced Grilled Chicken, Onion, Chilli"
+        },
+        {
+          "name": "La Pizza Di Pollo Fiorentina",
+          "price": "25/35",
+          "ingredients": "Tomato Sauce, Grilled Chicken, Fresh Spinach, Tomatoes, Mozzarella Cheese"
+        },
+        {
+          "name": "Pizza Di Pollo",
+          "price": "25/35",
+          "ingredients": "Tomato Sauce, Mozzarella Cheese, Grilled Chicken, Fresh Vegetables"
+        },
+        {
+          "name": "Pizza Di Fajitas Di Pollo",
+          "price": "25/35",
+          "ingredients": "Tomato Sauce, Mozzarella Cheese, Grilled Chicken, Fresh Vegetables"
+        }
+      ]
+    },
+    {
+      "category": "meat pizza",
+      "dishes": [
+        {
+          "name": "Pizza Italiano",
+          "price": "25/35",
+          "ingredients": "pepperoni, Italian Sausage, Minced Meat, Fresh Vegetables"
+        },
+        {
+          "name": "Pepperoni Pizza",
+          "price": "25/35",
+          "ingredients": "Tomato Sauce, Mozzarella Cheese, Pepperoni, Organo Leaves"
+        },
+        {
+          "name": "Pizza De Carne",
+          "price": "25/35",
+          "ingredients": "Tomato Sauce, Mozzarella Cheese, Spiced Minced Meat, Fresh Tomatoes"
+        },
+        {
+          "name": "Pizza Amego",
+          "price": "25/35",
+          "ingredients": "Tomato Sauce, Mozzarella Cheese, Italian Sausage, Fresh Olives, Fresh Vegetables"
+        },
+        {
+          "name": "Pizza Hawaiian",
+          "price": "25/35",
+          "ingredients": "Tomato Sauce, Mozzarella Cheese, Beef Slices, Pineapple Slices"
+        },
+        {
+          "name": "Calzone Pizza",
+          "price": "35",
+          "ingredients": "Filled Pizza Dough, Tomato Sauce, Oregano, Mushrooms, Turkey"
+        }
+      ]
+    },
+    {
+      "category": "seafood pizza",
+      "dishes": [
+        {
+          "name": "Pizza Al Tonno",
+          "price": "25/35",
+          "ingredients": "Tomato Sauce, Mozzarella Cheese, Onion Rings, Olives, Organo"
+        },
+        {
+          "name": "Pizza ai Calamari",
+          "price": "25/35",
+          "ingredients": "Tomato Sauce, Mozzarella Cheese, Grilled Calamari, Fresh Vegetables"
+        },
+        {
+          "name": "Pizza con Gamberetti",
+          "price": "30/40",
+          "ingredients": "Tomato Sauce, Mozzarella Cheese, Grilled Shrimps, Fresh Vegetables"
+        },
+        {
+          "name": "Pizza al Salmone",
+          "price": "30/40",
+          "ingredients": "Tomato Sauce, Mozzarella Cheese, Grilled Shrimps, Fresh Vegetables"
+        },
+        {
+          "name": "Pizza ai Frutti Di Mare",
+          "price": "35/45",
+          "ingredients": "Tomato Sauce, Mozzarella Cheese, Shrimps, Calamarie, Crab Strips, Fresh Vegetables, Fresh Olives"
+        },
+        {
+          "name": "Pizza Napolitana",
+          "price": "25/35",
+          "ingredients": "Tomato Sauce, Mozzarella Cheese, Anchovies, Fresh Tomatoes, Fresh Olives"
+        }
+      ]
+    },
+    {
+      "category": "italian pasta",
+      "dishes": [
+        {
+          "name": "Spaghetti Aglio E Olio",
+          "price": "20",
+          "ingredients": "Garlic, Olive Oil, Parsley, Chilli"
+        },
+        {
+          "name": "Speghetti Bolognese",
+          "price": "30",
+          "ingredients": "Mince Meat, Bolognese Sauce, Parmesan Cheese"
+        },
+        {
+          "name": "Spaghetti Carbonara",
+          "price": "30",
+          "ingredients": "Carbonara Sauce Spaghetti, Roasted Beef, Parmesan Cheese"
+        },
+        {
+          "name": "Penne Aldredo",
+          "price": "30",
+          "ingredients": "Mushroom Sauce, Grilled Chicken, Parmesan Cheese"
+        },
+        {
+          "name": "Penne Arrabiata",
+          "price": "25",
+          "ingredients": "Hot Tomato Sauce, Fresh Vegetables, Olive Oil, Garlic"
+        },
+        {
+          "name": "Penne Qattro Formaggi",
+          "price": "35",
+          "ingredients": "Special Four Cheese Penne Spaghetti"
+        },
+        {
+          "name": "Penne Gamberetti",
+          "price": "35",
+          "ingredients": "Pinke Penne Sauce, Fresh Shrimps, Broccoli, Parmesan Cheese"
+        },
+        {
+          "name": "Penne al Tonno",
+          "price": "30",
+          "ingredients": "Tomato Sauce, Tuna, Garlic, Onion, Fresh Olives"
+        },
+        {
+          "name": "Penne Calabrese",
+          "price": "35",
+          "ingredients": "Tomato Sauce, Italian Sausage, Fresh Vegetables, Fresh Olives, Mozzarella Cheese"
+        },
+        {
+          "name": "Penne Frutti di Mare",
+          "price": "35",
+          "ingredients": "Seafood Mix, Choose the sauce of your liking!"
+        },
+        {
+          "name": "Chicken Fettuccine",
+          "price": "35",
+          "ingredients": "Grilled Chicken, Mushrooms, Saffron Sauce, Mozzarella Cheese"
+        },
+        {
+          "name": "Pasta Negresko",
+          "price": "35",
+          "ingredients": "Grilled Chicken, Mushrooms, Cheddar Sauce, Mozzarella Cheese"
+        },
+        {
+          "name": "Chicken Lasagna",
+          "price": "35",
+          "ingredients": "Minced Grilled Chiken, Mozzarella Cheese, Bachamel Sauce, Parmesan Cheese"
+        }
+      ]
+    },
+    {
+      "category": "italian risotto",
+      "dishes": [
+        {
+          "name": "Vegetables Risotto",
+          "price": "25",
+          "ingredients": "Red Sauce, Vegetables"
+        },
+        {
+          "name": "Risotto di Pollo",
+          "price": "30",
+          "ingredients": "Grilled Cheese, Mushrooms, White Sauce, Parmesan Cheese"
+        },
+        {
+          "name": "Risotto di Carne",
+          "price": "30",
+          "ingredients": " Minced Meat, Vegetables, Mushrooms, White Sauce, Parmesan Cheese"
+        },
+        {
+          "name": "Risotto Pescatora",
+          "price": "40",
+          "ingredients": "Shrimps, Calamari, Crab, Parmesan Cheese, Your Choice of Sauce (White, Pink, or Red)!"
+        }
+      ]
+    },
+    {
+      "category": "sandwiches",
+      "dishes": [
+        {
+          "name": "Liver Sandwich",
+          "price": "12",
+          "ingredients": ""
+        },
+        {
+          "name": "Cabab Sandwich",
+          "price": "12",
+          "ingredients": ""
+        },
+        {
+          "name": "Tikka Chicken",
+          "price": "12",
+          "ingredients": ""
+        },
+        {
+          "name": "Shrimp Sandwich",
+          "price": "15",
+          "ingredients": ""
+        },
+        {
+          "name": "chicken Fajita Sandwich",
+          "price": "12",
+          "ingredients": ""
+        },
+        {
+          "name": "Fajita Sandwich",
+          "price": "12",
+          "ingredients": ""
+        },
+        {
+          "name": "Tuna Sandwich",
+          "price": "10",
+          "ingredients": ""
+        },
+        {
+          "name": "Veg, Omelette Sandwich",
+          "price": "10",
+          "ingredients": ""
+        },
+        {
+          "name": "Penne Chicken/Meat",
+          "price": "12",
+          "ingredients": ""
+        },
+        {
+          "name": "Club Sandwich Cheese&Veg.",
+          "price": "12",
+          "ingredients": ""
+        },
+        {
+          "name": "Club Sandwich Turkey",
+          "price": "15",
+          "ingredients": ""
+        },
+        {
+          "name": "Club Sandwich Mix",
+          "price": "20",
+          "ingredients": ""
+        },
+        {
+          "name": "Tuna Club Sandwich",
+          "price": "12",
+          "ingredients": ""
+        },
+        {
+          "name": "Halloumi Cheese",
+          "price": "12",
+          "ingredients": ""
+        },
+        {
+          "name": "Paneen Prawns",
+          "price": "15",
+          "ingredients": ""
+        },
+        {
+          "name": "Cheese Burger Beef/Chicken",
+          "price": "15",
+          "ingredients": ""
+        },
+        {
+          "name": "Double Cheese Burger Beef/Chicken",
+          "price": "20",
+          "ingredients": ""
+        },
+        {
+          "name": "Sausage Sandwich",
+          "price": "15",
+          "ingredients": ""
+        }
+      ]
+    },
+    {
+      "category": "appitizers",
+      "dishes": [
+        {
+          "name": "Onion Rings",
+          "price": "8",
+          "ingredients": ""
+        },
+        {
+          "name": "Potato Wedges",
+          "price": "15",
+          "ingredients": ""
+        },
+        {
+          "name": "Mozzarella Cheese Sticks",
+          "price": "20",
+          "ingredients": ""
+        },
+        {
+          "name": "Chicken Wings",
+          "price": "15",
+          "ingredients": ""
+        },
+        {
+          "name": "Chicken Legs",
+          "price": "15",
+          "ingredients": ""
+        },
+        {
+          "name": "Curly Fries With Cheese",
+          "price": "15",
+          "ingredients": ""
+        },
+        {
+          "name": "Dynamite Chickien",
+          "price": "15",
+          "ingredients": ""
+        },
+        {
+          "name": "Dynamite Shrimp",
+          "price": "25",
+          "ingredients": ""
+        },
+        {
+          "name": "Grilled Halloumi Cheese",
+          "price": "20",
+          "ingredients": ""
+        }
+      ]
+    },
+    {
+      "category": "salads",
+      "dishes": [
+        {
+          "name": "Green Salad",
+          "price": "15",
+          "ingredients": ""
+        },
+        {
+          "name": "Caesar Salad",
+          "price": "20",
+          "ingredients": ""
+        },
+        {
+          "name": "Greek Salad",
+          "price": "20",
+          "ingredients": ""
+        },
+        {
+          "name": "Seafood Salad",
+          "price": "30",
+          "ingredients": ""
+        },
+        {
+          "name": "Shrimps & Avocado Salad",
+          "price": "30",
+          "ingredients": ""
+        },
+        {
+          "name": "Caprese Salad",
+          "price": "20",
+          "ingredients": ""
+        },
+        {
+          "name": "Mix Salad",
+          "price": "25",
+          "ingredients": "Lettuce, Cucumber, Tomatoes, Mortadella, Cheese, Boiled Eggs, Corn"
+        }
+      ]
+    },
+    {
+      "category": "soups",
+      "dishes": [
+        {
+          "name": "Lentil Soup",
+          "price": "10",
+          "ingredients": ""
+        },
+        {
+          "name": "Chicken Cream & Mushroom",
+          "price": "15",
+          "ingredients": ""
+        },
+        {
+          "name": "Vegetable Soup",
+          "price": "10",
+          "ingredients": ""
+        },
+        {
+          "name": "Seafood Soup",
+          "price": "18",
+          "ingredients": ""
+        },
+        {
+          "name": "Broccoli Soup",
+          "price": "10",
+          "ingredients": ""
+        },
+        {
+          "name": "Spinach Soup",
+          "price": "10",
+          "ingredients": ""
+        }
+      ]
+    },
+    {
+      "category": "sweets",
+      "dishes": [
+        {
+          "name": "Tiramisu",
+          "price": "25",
+          "ingredients": ""
+        },
+        {
+          "name": "Crepe Nutella",
+          "price": "8",
+          "ingredients": ""
+        },
+        {
+          "name": "Crepe Nutella Bananas",
+          "price": "10",
+          "ingredients": ""
+        },
+        {
+          "name": "Crepe With Nuts",
+          "price": "10",
+          "ingredients": ""
+        },
+        {
+          "name": "Crepe With Ice-Cream",
+          "price": "10",
+          "ingredients": ""
+        },
+        {
+          "name": "Banana Split",
+          "price": "15",
+          "ingredients": ""
+        }
+      ]
+    },
+    {
+      "category": "juice",
+      "dishes": [
+        {
+          "name": "Chocolate Kit-Kat",
+          "price": "15",
+          "ingredients": ""
+        },
+        {
+          "name": "Mars",
+          "price": "15",
+          "ingredients": ""
+        },
+        {
+          "name": "Snickers",
+          "price": "15",
+          "ingredients": ""
+        },
+        {
+          "name": "Kinder",
+          "price": "15",
+          "ingredients": ""
+        },
+        {
+          "name": "Oreo",
+          "price": "15",
+          "ingredients": ""
+        },
+        {
+          "name": "Avocado",
+          "price": "10",
+          "ingredients": ""
+        },
+        {
+          "name": "Strawberry",
+          "price": "10",
+          "ingredients": ""
+        },
+        {
+          "name": "Lemon & Mint",
+          "price": "10",
+          "ingredients": ""
+        },
+        {
+          "name": "Orange",
+          "price": "10",
+          "ingredients": ""
+        },
+        {
+          "name": "Pineapple",
+          "price": "10",
+          "ingredients": ""
+        },
+        {
+          "name": "Banana Milk",
+          "price": "10",
+          "ingredients": ""
+        }
+      ]
+    },
+    {
+      "category": "drinks",
+      "dishes": [
+        {
+          "name": "Soft Drinks",
+          "price": "3",
+          "ingredients": ""
+        },
+        {
+          "name": "Tea",
+          "price": "3",
+          "ingredients": ""
+        },
+        {
+          "name": "Moroccan Tea",
+          "price": "10",
+          "ingredients": ""
+        },
+        {
+          "name": "Turkish Coffee",
+          "price": "5",
+          "ingredients": ""
+        },
+        {
+          "name": "Water Small/Large",
+          "price": "2/5",
+          "ingredients": ""
+        }
+      ]
+    }
+  ]
+}

@@ -128,14 +128,28 @@ section.callOuts
       +center-h()
 
 section.orderOnline
-  height: 800px
+  height: 1600px
   //background-color: #8c8c8c
   ul
     li
       list-style: none
+  ul#menu
+    display: flex
+    -ms-flex-direction: row
+    -webkit-flex-direction: row
+    flex-direction: row
+    justify-content: space-between
+    align-items: flex-start
+    -ms-flex-wrap: wrap
+    -webkit-flex-wrap: wrap
+    flex-wrap: wrap
+
+
   .categoryList
     padding: 20px 0
-    height: 200px
+    //height: 400px
+    width: 300px
+
     h3
       display: inline-block
       background-color: white
