@@ -14,8 +14,8 @@ html
 		link(rel='stylesheet' type='text/css' href='_assets/lib/normalize.css')
 		link(rel='stylesheet' type='text/css' href='_assets/lib/bootstrap-3.3.7-dist/css/bootstrap.min.css')
 		link(rel='stylesheet' type='text/css' href='_assets/lib/animateEdited.css')
-		link(rel='stylesheet' type='text/css' href='_assets/lib/slick/slick.css')
-		link(rel='stylesheet' type='text/css' href='_assets/lib/slick/slick-theme.css')
+		//link(rel='stylesheet' type='text/css' href='_assets/lib/slick/slick.css')
+		//link(rel='stylesheet' type='text/css' href='_assets/lib/slick/slick-theme.css')
 		link(rel='stylesheet' type='text/css' href='_styles/stylesheet.css')
 		//todo on deployment only use minified files and customize bootsrap
 
@@ -24,63 +24,47 @@ html
 	body
 		.container-fluid
 			.sidebar.col-md-2
-				.logo
-					img(src="_assets/img/images/pizzaTray.png" width= '150px').center-block
-					h1.title.text-center Napolitano
-				nav
-					img(src='_assets/img/elements/ribbon.png' width='140px').center-block
-					ul.center-block
-						li
-							a(href="#1").scroll-on-page-link Our Best Dishes
-						li
-							a(href="#2").scroll-on-page-link Order Online
-						li
-							a(href="#3").scroll-on-page-link Contact us
-							//todo complete add the links here
-			header.col-md-10
+				.logo.col-md-12.col-xs-12.col-sm-12
+					img(src="_assets/img/images/NapolitanoLogo.png" width= '200px')
+				nav.col-md-12.col-xs-12.col-sm-12
+					img.ribbon(src='_assets/img/elements/ribbon.png' width='140px').center-block
+					ul.col-xs-12
+						li.col-xs-4.col-md-12.col-sm-12
+							a(href="#pizzaCarousel").scroll-on-page-link Our Best Dishes
+						li.col-xs-4.col-md-12.col-sm-12
+							a(href="#orderOnline").scroll-on-page-link Order Online
+						li.col-xs-4.col-md-12.col-sm-12
+							a(href="#contactUs").scroll-on-page-link Contact us
+			header.col-md-10.col-sm-12.col-xs-12
 				#pizzaCarousel
 					.mcPizza-inner.center-block
-						//button.prevBtn Prev
-						//button.nextBtn Next
-
+						button.prevBtn
+							span.glyphicon.glyphicon-chevron-left
 						.item.activeStyle
-							img(src='_assets/img/images/pizzaTray.png' width= carouselItemWidth height= carouselItemHeight)
-						.item.firstLevelStyle
-							img(src='_assets/img/images/pizzaTray.png' width= carouselItemWidth height= carouselItemHeight)
-						.item
-							img(src='_assets/img/images/pizzaTray.png' width= carouselItemWidth height= carouselItemHeight)
-						.item
-							img(src='_assets/img/images/pizzaTray.png' width= carouselItemWidth height= carouselItemHeight)
-						.item
-							img(src='_assets/img/images/pizzaTray.png' width= carouselItemWidth height= carouselItemHeight)
-						.item.firstLevelStyle
-							img(src='_assets/img/images/pizzaTray.png' width= carouselItemWidth height= carouselItemHeight)
-					//.carousel.slide#pizzaCarousel(data-ride="carousel")
-						.carousel-inner(role='listbox')
-							.item.active
-								img.center-block(src='_assets/img/images/pizzaTray.png' width= carouselItemWidth height= carouselItemHeight)
-							.item
-								img.center-block(src='_assets/img/images/pizzaTray.png' width= carouselItemWidth height= carouselItemHeight)
-							.item
-								img.center-block(src='_assets/img/images/pizzaTray.png' width= carouselItemWidth height= carouselItemHeight)
-
-							a.left.carousel-control(href='#pizzaCarousel' role='button' data-slide='prev')
-								span.glyphicon.glyphicon-chevron-left(aria-hidden='true')
-								span.sr-only Previous
-							a.right.carousel-control(href='#pizzaCarousel' role='button' data-slide='next')
-								span.glyphicon.glyphicon-chevron-right(aria-hidden='true')
-								span.sr-only Next
-				h2.headerText Did you taste our  Margherita Pizza ?!
+							img(src='_assets/img/images/pepperoni-pizza.png' width= carouselItemWidth height= carouselItemHeight alt="Pepperoni Pizza")
+						.item.next
+							img(src='_assets/img/images/quttro_stegioni-pizza.png' width= carouselItemWidth height= carouselItemHeight alt="Guttro Stegioni Pizza")
+						.item.nextNext
+							img(src='_assets/img/images/pepperoni-pizza.png' width= carouselItemWidth height= carouselItemHeight alt="Pepperoni Pizza")
+						.item.prevPrev
+							img(src='_assets/img/images/quttro_stegioni-pizza.png' width= carouselItemWidth height= carouselItemHeight alt="Guttro Stegioni Pizza")
+						.item.prev
+							img(src='_assets/img/images/pepperoni-pizza.png' width= carouselItemWidth height= carouselItemHeight alt="Pepperoni Pizza")
+						button.nextBtn(aria-label="Next")
+							span.glyphicon.glyphicon-chevron-right
+				h2.headerText Did you taste our
+					span.dish  Pepperoni Pizza
+					|  ?!
 				h3.callUsText Call us on 02-5559744
-			section.callOuts.col-md-9.col-md-offset-3
+			section.callOuts.col-md-9.col-md-offset-3.col-sm-12.col-xs-12
 				//todo fix browser-sync display: none bug
-				.ad.col-md-4
+				.ad.col-md-4.col-sm-4.col-xs-12
 					img(src="http://placehold.it/200x150" width= adWidth height= adHeight)
-				.ad.col-md-4
+				.ad.col-md-4.col-sm-4.col-xs-12
 					img(src="http://placehold.it/200x150" width= adWidth height= adHeight)
-				.ad.col-md-4
+				.ad.col-md-4.col-sm-4.col-xs-12
 					img(src="http://placehold.it/200x150" width= adWidth height= adHeight)
-			section.orderOnline.col-md-12
+			section#orderOnline.orderOnline.col-md-12.col-sm-12.col-xs-12
 				script#handlebarsTemp(type='text/handlebars-template')
 					ul#menu
 						| {{#menu}}
@@ -98,21 +82,20 @@ html
 								| {{/dishes}}
 						| {{/menu}}
 
-			footer.col-lg-12.col-md-12.col-sm-12
-				.map.col-md-6
-					iframe(src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d28125.328536815286!2d54.553012925649874!3d24.371639600641778!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x5cce3e228d0bfd19!2sAbu+Dhabi+University!5e0!3m2!1sen!2sae!4v1485120229285', width='600', height='450', frameborder='0', style='border:0', allowfullscreen='')
-
-				.contactUs.col-md-6
+			footer.col-lg-12.col-md-12.col-sm-12.col-xs-12
+				.map.col-md-6.col-sm-6.col-xs-12
+					iframe(src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1032.8843509168178!2d54.53348440988816!3d24.334920998734056!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjTCsDIwJzA1LjciTiA1NMKwMzInMDIuOCJF!5e0!3m2!1sen!2s!4v1486851847129" width="600" height="450" frameborder="0" style="border:0" allowfullscreen='')
+				.contactUs#contactUs.col-md-6.col-sm-6.col-xs-12
 					h2.contactUsTitle
 						img.icon(src='_assets/img/elements/compass.png')
 						| Contact Us
 					.contactUsBreak
 					p.contactUsText
 						strong Location:
-						|  Abu Dhabi, Musaffah Shabiya, East 10 Opposite to Fresh & More Super Market
+						|  Abu Dhabi, Musaffah Shabiya, East 10 Behind Fresh & More Super Market
 						//todo check location text
 					.contactUsBreak
-					p.contactUsTitle.Landline 02-5559744
+					p.contactUsTitle.landline 02-5559744
 					p.contactUsText.email info@Napolitano.com
 					.contactUsBreak
 					.socialMedia
@@ -121,13 +104,16 @@ html
 						a.icon(href='#')
 							img(src='_assets/img/elements/instagram.png' width='30px')
 
-		//script#menuJSON(type='application/json' src='menu.json')
-		script(type='text/javascript' src="_assets/lib/slick/slick.js")
+					p.copyrights
+						span.glyphicon.glyphicon-copyright-mark
+						|  Designed by
+						a(href='http://omarnaser.com' target="_blank")  Omar Nasser
+
+
+		//script(type='text/javascript' src="_assets/lib/slick/slick.js")
 		script(type='text/javascript' src='_assets/lib/handlebars-v4.0.5.js')
 		script(type='text/javascript' src='_js/handlebarsTasks.js')
 
-
-					//todo adding copyrights
 
 
 

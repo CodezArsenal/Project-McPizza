@@ -7,8 +7,18 @@
 $greyDark: #404343
 $redDark: #e60000
 
+$phoneBreakPoint: '768px'
+
 =test()
   border: 1px solid chartreuse
+
+
+@-webkit-keyframes typing
+  from
+    width: 0
+  to
+    width: 16.3em
+
 
 .container-fluid
   padding: 0
@@ -16,17 +26,17 @@ $redDark: #e60000
   //background-image: radial-gradient(closest-side, #f7931e, #f15a24 750px)
   background-image: radial-gradient(closest-side, #FF7F32, #e60000 750px)
 
+
 .sidebar
   .logo
-    h1.title
-      padding: 0 0 20px 0
-      margin: 0
-      font-variant: all-small-caps
-      font-family: Trattatello
-      font-size: 42px
-
+    padding: 30px
+    position: relative
+    height: 150px
+    img
+      +center-h()
   nav
     position: relative
+    padding: 20px
     ul
       padding: 0
       margin: 0
@@ -51,6 +61,24 @@ $redDark: #e60000
       a:visited
         text-decoration: none
 
+@media (max-width: $phoneBreakPoint)
+  .sidebar
+    .logo
+      padding: 0
+      margin: 30px 0
+    nav
+      display: block
+      img.ribbon
+        display: none
+      ul
+        display: block
+        //position: static
+        padding: 20px 0
+        li
+          display: inline-block
+          margin: 0
+          float: left
+          font-size: 22px
 
 
 header
@@ -59,61 +87,102 @@ header
     padding: 15px
     margin: 50px 0 30px 0
     font-family: "Snell Roundhand"
-    font-size: 42px
-    font-weight: bolder
+    font-size: 46px 
+    font-weight: lighter
     text-align: center
+    span
+      font-weight: bold
   .callUsText
     font-family: Impact
     font-size: 38px
     text-align: center
     margin: 0
 
+@media (max-width: $phoneBreakPoint)
+  header
+    margin: 0
+    .callUsText
+      font-size: 28px
 
 
+
+
+//todo put shadows under carousel elements
 #pizzaCarousel
+  height: 400px
   .mcPizza-inner
-    width: 800px
-    padding: 30px 10px
+    width: 900px
+    padding: 100px 10px
     height: 400px
     position: relative
-    .slick-arrow
-      top: 85%
-      z-index: 11
-    .slick-prev
-      left: 130px
-    .slick-next
-      right: 130px
-    .slick-list
-      .slick-track
-        height: 400px
-        .slick-slide
-          img
-            +center-h()
-            position: relative
-            top: 25%
-            filter: blur(3px)
-        .activeStyle
-          z-index: 10
-          position: relative
-          img
-            width: 360px
-            height: 300px
-            filter: none
-            +center-h()
-            position: relative
-            top: 25%
-        .firstLevelStyle
-          img
-            top: 40%
-        .secondLevelStyle
-          img
-            top: 30%
-        .secondLevelStyle.left
-          img
-            left: 60%
-        .secondLevelStyle.right
-          img
-            left: 40%
+    overflow: hidden
+
+    display: flex
+    -ms-flex-direction: row
+    -webkit-flex-direction: row
+    flex-direction: row
+    justify-content: space-around
+    align-items: flex-start
+
+    .item
+      position: relative
+      img
+        filter: blur(3px)
+
+    .prevPrev
+      order: 1
+      left: 15%
+      z-index: 8
+    .prev
+      order: 2
+      top: 25%
+      left: 10%
+      z-index: 9
+    .item.activeStyle
+      order: 3
+      z-index: 10
+      position: relative
+      img
+        width: 380px
+        height: 300px
+        filter: none
+        position: relative
+        top: 25%
+    .next
+      order: 4
+      top: 25%
+      left: -10%
+      z-index: 9
+    .nextNext
+      order: 5
+      left: -15%
+      z-index: 8
+
+    //navigation buttons
+    button.nextBtn, button.prevBtn
+      position: absolute
+      top: 75%
+
+      width: 40px
+      height: 40px
+      padding: 0
+      cursor: pointer
+      border-radius: 100%
+      border: none
+      background-color: transparent
+      span
+        font-size: 2em
+
+    button.nextBtn
+      right: 150px
+    button.prevBtn
+      left: 150px
+    button.nextBtn:focus, button.prevBtn:focus
+      outline: none !important
+    button.nextBtn:hover, button.prevBtn:hover
+      font-size: 1.5em
+
+
 
 .scroll-on-page-link
   display: block
@@ -126,6 +195,15 @@ section.callOuts
     position: relative
     img
       +center-h()
+
+@media (max-width: $phoneBreakPoint)
+  section.callOuts
+    padding: 0
+    height: auto
+    .ad
+      margin: 10px 0
+      img
+        position: relative
 
 section.orderOnline
   height: 1600px
@@ -143,12 +221,61 @@ section.orderOnline
     -ms-flex-wrap: wrap
     -webkit-flex-wrap: wrap
     flex-wrap: wrap
-
-
   .categoryList
     padding: 20px 0
-    //height: 400px
     width: 300px
+    h3
+      display: inline-block
+      background-color: white
+      padding: 0 10px
+      color: transparent
+      font-family: Impact
+      font-variant: small-caps
+      font-size: 32px
+      box-shadow: 0 1px 1px 1px black
+      -webkit-transform: skew(-20deg)
+      -moz-transform: skew(-20deg)
+      -o-transform: skew(-20deg)
+      transform: skew(-20deg)
+      position: relative
+      span
+        background-image: radial-gradient(closest-side, #FF7F32, #e60000 750px)
+        background-attachment: fixed
+        -webkit-text-fill-color: transparent
+        -webkit-background-clip: text
+        display: block
+        //todo text shouldn't be skewed
+        position: relative
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -15%)
+      //todo text-shadow: 0 1px 0 black inset
+
+    li.meal
+      //todo edit the fonts
+      span.glyphicon
+        padding: 5px
+
+    li.ingredients
+      display: none
+      padding: 5px 15px 10px 30px
+
+@media (max-width: $phoneBreakPoint)
+  section.orderOnline
+    height: auto
+    ul#menu
+      margin: 0
+      padding: 0
+      display: block
+    .categoryList
+      padding: 0
+      li.meal, li.price, li.ingredients
+        display: none
+    .categoryList:hover li.meal, .categoryList:hover li.price
+      display: inline-block
+    .categoryList:hover li.price
+      float: right
+
 
     h3
       display: inline-block
@@ -203,13 +330,13 @@ footer
   .map
     padding: 0
     iframe
+      pointer-events: none
       width: 100%
       height: 450px
   .contactUs
     padding: 10px 0 25px
     height: 450px
     background-color: $greyDark
-    //height: 450px
     .contactUsTitle
       color: white
       font-family: Impact, sans-serif
@@ -219,7 +346,7 @@ footer
       .icon
         width: 70px
         margin: 0 20px 0 30px
-    .contactUsTitle.Landline
+    .landline
       margin: 5px 30px 5px 120px
     .contactUsText
       color: white
@@ -227,27 +354,64 @@ footer
       font-weight: lighter
       font-size: 20px
       margin: 5px 30px 5px 120px
+      position: relative
       //todo change to a suitable font
 
     .contactUsBreak
       border-bottom: 1px solid #95989A
-      margin: 30px 0 30px 120px
+      margin: 15px 0 15px 120px
       width: 250px
     .contactUsBreak:nth-child(2)
       //margin-bottom: 10px
       //todo edith margins like mockup
     .socialMedia
       padding: 0 60px
-      margin: -30px 0 0 0
       .icon
         float: right
         padding: 5px
+    p.copyrights:hover
+      color: white
+    p.copyrights
+      font-family: "Gurmukhi MN"
+      font-size: 12px
+      position: absolute
+      bottom: 0
+      left: 0
+      background-color: black
+      width: 100%
+      opacity: .5
+      color: grey
+      text-align: center
+      margin: 0
+      a
+        text-decoration: none
+        color: inherit
+      a:hover
+        text-decoration: none
 
-
-
-
-
-
-
-
-// Based on code by http://codepen.io/xmark/
+@media (max-width: $phoneBreakPoint)
+  footer
+    height: auto
+    .map
+      height: 370px
+      iframe
+        height: 370px
+    .contactUs
+      height: auto
+      padding: 0
+      .contactUsBreak, .landline, .email, .contactUsText
+        margin: 15px 30px 10px 60px
+      p.copyrights
+        background-color: black
+        position: absolute
+        left: 0
+        bottom: 0
+        margin: 0
+        width: 100%
+        opacity: .5
+        color: grey
+        text-align: center
+      .socialMedia
+        padding: 0 30px
+        .icon
+          margin: 15px 0 40px 0

@@ -3,19 +3,27 @@
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
+@-webkit-keyframes typing {
+  from {
+    width: 0; }
+  to {
+    width: 16.3em; } }
 .container-fluid {
   padding: 0;
   margin: 0;
   background-image: radial-gradient(closest-side, #FF7F32, #e60000 750px); }
 
-.sidebar .logo h1.title {
-  padding: 0 0 20px 0;
-  margin: 0;
-  font-variant: all-small-caps;
-  font-family: Trattatello;
-  font-size: 42px; }
+.sidebar .logo {
+  padding: 30px;
+  position: relative;
+  height: 150px; }
+  .sidebar .logo img {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%); }
 .sidebar nav {
-  position: relative; }
+  position: relative;
+  padding: 20px; }
   .sidebar nav ul {
     padding: 0;
     margin: 0;
@@ -42,62 +50,110 @@
     .sidebar nav ul a:visited {
       text-decoration: none; }
 
+@media (max-width: 768px) {
+  .sidebar .logo {
+    padding: 0;
+    margin: 30px 0; }
+  .sidebar nav {
+    display: block; }
+    .sidebar nav img.ribbon {
+      display: none; }
+    .sidebar nav ul {
+      display: block;
+      padding: 20px 0; }
+      .sidebar nav ul li {
+        display: inline-block;
+        margin: 0;
+        float: left;
+        font-size: 22px; } }
 header {
   margin-bottom: 50px; }
   header .headerText {
     padding: 15px;
     margin: 50px 0 30px 0;
     font-family: "Snell Roundhand";
-    font-size: 42px;
-    font-weight: bolder;
+    font-size: 46px;
+    font-weight: lighter;
     text-align: center; }
+    header .headerText span {
+      font-weight: bold; }
   header .callUsText {
     font-family: Impact;
     font-size: 38px;
     text-align: center;
     margin: 0; }
 
-#pizzaCarousel .mcPizza-inner {
-  width: 800px;
-  padding: 30px 10px;
-  height: 400px;
-  position: relative; }
-  #pizzaCarousel .mcPizza-inner .slick-arrow {
-    top: 85%;
-    z-index: 11; }
-  #pizzaCarousel .mcPizza-inner .slick-prev {
-    left: 130px; }
-  #pizzaCarousel .mcPizza-inner .slick-next {
-    right: 130px; }
-  #pizzaCarousel .mcPizza-inner .slick-list .slick-track {
-    height: 400px; }
-    #pizzaCarousel .mcPizza-inner .slick-list .slick-track .slick-slide img {
-      position: absolute;
-      left: 50%;
-      transform: translateX(-50%);
-      position: relative;
+@media (max-width: 768px) {
+  header {
+    margin: 0; }
+    header .callUsText {
+      font-size: 28px; } }
+#pizzaCarousel {
+  height: 400px; }
+  #pizzaCarousel .mcPizza-inner {
+    width: 900px;
+    padding: 100px 10px;
+    height: 400px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    -ms-flex-direction: row;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start; }
+    #pizzaCarousel .mcPizza-inner .item {
+      position: relative; }
+      #pizzaCarousel .mcPizza-inner .item img {
+        filter: blur(3px); }
+    #pizzaCarousel .mcPizza-inner .prevPrev {
+      order: 1;
+      left: 15%;
+      z-index: 8; }
+    #pizzaCarousel .mcPizza-inner .prev {
+      order: 2;
       top: 25%;
-      filter: blur(3px); }
-    #pizzaCarousel .mcPizza-inner .slick-list .slick-track .activeStyle {
+      left: 10%;
+      z-index: 9; }
+    #pizzaCarousel .mcPizza-inner .item.activeStyle {
+      order: 3;
       z-index: 10;
       position: relative; }
-      #pizzaCarousel .mcPizza-inner .slick-list .slick-track .activeStyle img {
-        width: 360px;
+      #pizzaCarousel .mcPizza-inner .item.activeStyle img {
+        width: 380px;
         height: 300px;
         filter: none;
-        position: absolute;
-        left: 50%;
-        transform: translateX(-50%);
         position: relative;
         top: 25%; }
-    #pizzaCarousel .mcPizza-inner .slick-list .slick-track .firstLevelStyle img {
-      top: 40%; }
-    #pizzaCarousel .mcPizza-inner .slick-list .slick-track .secondLevelStyle img {
-      top: 30%; }
-    #pizzaCarousel .mcPizza-inner .slick-list .slick-track .secondLevelStyle.left img {
-      left: 60%; }
-    #pizzaCarousel .mcPizza-inner .slick-list .slick-track .secondLevelStyle.right img {
-      left: 40%; }
+    #pizzaCarousel .mcPizza-inner .next {
+      order: 4;
+      top: 25%;
+      left: -10%;
+      z-index: 9; }
+    #pizzaCarousel .mcPizza-inner .nextNext {
+      order: 5;
+      left: -15%;
+      z-index: 8; }
+    #pizzaCarousel .mcPizza-inner button.nextBtn, #pizzaCarousel .mcPizza-inner button.prevBtn {
+      position: absolute;
+      top: 75%;
+      width: 40px;
+      height: 40px;
+      padding: 0;
+      cursor: pointer;
+      border-radius: 100%;
+      border: none;
+      background-color: transparent; }
+      #pizzaCarousel .mcPizza-inner button.nextBtn span, #pizzaCarousel .mcPizza-inner button.prevBtn span {
+        font-size: 2em; }
+    #pizzaCarousel .mcPizza-inner button.nextBtn {
+      right: 150px; }
+    #pizzaCarousel .mcPizza-inner button.prevBtn {
+      left: 150px; }
+    #pizzaCarousel .mcPizza-inner button.nextBtn:focus, #pizzaCarousel .mcPizza-inner button.prevBtn:focus {
+      outline: none !important; }
+    #pizzaCarousel .mcPizza-inner button.nextBtn:hover, #pizzaCarousel .mcPizza-inner button.prevBtn:hover {
+      font-size: 1.5em; }
 
 .scroll-on-page-link {
   display: block;
@@ -113,6 +169,14 @@ section.callOuts {
       left: 50%;
       transform: translateX(-50%); }
 
+@media (max-width: 768px) {
+  section.callOuts {
+    padding: 0;
+    height: auto; }
+    section.callOuts .ad {
+      margin: 10px 0; }
+      section.callOuts .ad img {
+        position: relative; } }
 section.orderOnline {
   height: 1600px; }
   section.orderOnline ul li {
@@ -160,6 +224,50 @@ section.orderOnline {
       display: none;
       padding: 5px 15px 10px 30px; }
 
+@media (max-width: 768px) {
+  section.orderOnline {
+    height: auto; }
+    section.orderOnline ul#menu {
+      margin: 0;
+      padding: 0;
+      display: block; }
+    section.orderOnline .categoryList {
+      padding: 0; }
+      section.orderOnline .categoryList li.meal, section.orderOnline .categoryList li.price, section.orderOnline .categoryList li.ingredients {
+        display: none; }
+    section.orderOnline .categoryList:hover li.meal, section.orderOnline .categoryList:hover li.price {
+      display: inline-block; }
+    section.orderOnline .categoryList:hover li.price {
+      float: right; }
+    section.orderOnline h3 {
+      display: inline-block;
+      background-color: white;
+      padding: 0 10px;
+      color: transparent;
+      font-family: Impact;
+      font-variant: small-caps;
+      font-size: 32px;
+      box-shadow: 0 1px 1px 1px black;
+      -webkit-transform: skew(-20deg);
+      -moz-transform: skew(-20deg);
+      -o-transform: skew(-20deg);
+      transform: skew(-20deg);
+      position: relative; }
+      section.orderOnline h3 span {
+        background-image: radial-gradient(closest-side, #FF7F32, #e60000 750px);
+        background-attachment: fixed;
+        -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
+        display: block;
+        position: relative;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -15%); }
+    section.orderOnline li.meal span.glyphicon {
+      padding: 5px; }
+    section.orderOnline li.ingredients {
+      display: none;
+      padding: 5px 15px 10px 30px; } }
 footer.col-md-12, footer.col-sm-12 {
   padding: 0; }
 
@@ -170,6 +278,7 @@ footer {
   footer .map {
     padding: 0; }
     footer .map iframe {
+      pointer-events: none;
       width: 100%;
       height: 450px; }
   footer .contactUs {
@@ -184,23 +293,69 @@ footer {
       footer .contactUs .contactUsTitle .icon {
         width: 70px;
         margin: 0 20px 0 30px; }
-    footer .contactUs .contactUsTitle.Landline {
+    footer .contactUs .landline {
       margin: 5px 30px 5px 120px; }
     footer .contactUs .contactUsText {
       color: white;
       font-family: Gurmukhi MN, sans-serif;
       font-weight: lighter;
       font-size: 20px;
-      margin: 5px 30px 5px 120px; }
+      margin: 5px 30px 5px 120px;
+      position: relative; }
     footer .contactUs .contactUsBreak {
       border-bottom: 1px solid #95989A;
-      margin: 30px 0 30px 120px;
+      margin: 15px 0 15px 120px;
       width: 250px; }
     footer .contactUs .socialMedia {
-      padding: 0 60px;
-      margin: -30px 0 0 0; }
+      padding: 0 60px; }
       footer .contactUs .socialMedia .icon {
         float: right;
         padding: 5px; }
+    footer .contactUs p.copyrights:hover {
+      color: white; }
+    footer .contactUs p.copyrights {
+      font-family: "Gurmukhi MN";
+      font-size: 12px;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      background-color: black;
+      width: 100%;
+      opacity: 0.5;
+      color: grey;
+      text-align: center;
+      margin: 0; }
+      footer .contactUs p.copyrights a {
+        text-decoration: none;
+        color: inherit; }
+      footer .contactUs p.copyrights a:hover {
+        text-decoration: none; }
+
+@media (max-width: 768px) {
+  footer {
+    height: auto; }
+    footer .map {
+      height: 370px; }
+      footer .map iframe {
+        height: 370px; }
+    footer .contactUs {
+      height: auto;
+      padding: 0; }
+      footer .contactUs .contactUsBreak, footer .contactUs .landline, footer .contactUs .email, footer .contactUs .contactUsText {
+        margin: 15px 30px 10px 60px; }
+      footer .contactUs p.copyrights {
+        background-color: black;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        margin: 0;
+        width: 100%;
+        opacity: 0.5;
+        color: grey;
+        text-align: center; }
+      footer .contactUs .socialMedia {
+        padding: 0 30px; }
+        footer .contactUs .socialMedia .icon {
+          margin: 15px 0 40px 0; } }
 
 /*# sourceMappingURL=stylesheet.css.map */

@@ -115,7 +115,7 @@ $(document).ready(function(){
 		},1000);
 	});*/
 
-	mcPizzaInner.slick({
+	/*mcPizzaInner.slick({
 		centerMode: true,
 		centerPadding: '130px',
 		slidesToShow: 3,
@@ -145,7 +145,7 @@ $(document).ready(function(){
 				}
 			}
 		]
-	});
+	});*/
 
 
 	$('.mcPizza-inner').on('swipe', function(event, slick, direction){
@@ -159,7 +159,7 @@ $(document).ready(function(){
 	});
 
 	function carouselPositioning(){
-		var slides = $(".slick-slide");
+		/*var slides = $(".slick-slide");
 		var current = $('.slick-current');
 		var currentPrev = current.prev();
 		var currentNext = current.next();
@@ -174,26 +174,57 @@ $(document).ready(function(){
 
 
 		slides.removeClass('activeStyle');
-		current.addClass('activeStyle');
+		current.addClass('activeStyle');*/
+
 	}
 
-	$('button.slick-next').click(function(){
-		carouselPositioning();
+	//initialize the headerText
+	function headerTextUpdate(){
+		//todo make it a typing animation rather than just changing the text
+		$('.headerText .dish').html(
+			" " + mcPizzaInner.find('.activeStyle').find('img').attr('alt')
+		);
+	}
+	headerTextUpdate();
 
-		/*currentImg.animate({
-			width: "360px",
-			height: "300px",
-		}, 1000);
-		currentImg.parent().prev().find('img').animate({
-			width: "180px",
-			height: "150px",
-		},1000);*/
+	function nextSlide(){
+		var active =  mcPizzaInner.find('.activeStyle');
+		var next = mcPizzaInner.find('.next');
+		var prev = mcPizzaInner.find('.prev');
+		var nextNext = mcPizzaInner.find('.nextNext');
+		var prevPrev = mcPizzaInner.find('.prevPrev');
 
+		active.removeClass('activeStyle').addClass('prev');
+		next.removeClass('next').addClass('activeStyle');
+		prev.removeClass('prev').addClass('prevPrev');
+		nextNext.removeClass('nextNext').addClass('next');
+		prevPrev.removeClass('prevPrev').addClass('nextNext');
+
+		headerTextUpdate();
+		//todo when clicking on a specific slide it has to be active!
+	}
+
+	var carouselIntervalTiming = 3000;
+	$('button.nextBtn').click(function(){
+		nextSlide();
+		clearInterval(carouselInterval);
+		carouselInterval = window.setInterval(nextSlide(), carouselIntervalTiming);
 	});
 
-	$('button.slick-prev').click(function(){
-		carouselPositioning();
+	$('button.prevBtn').click(function(){
+		var active =  mcPizzaInner.find('.activeStyle');
+		var next = mcPizzaInner.find('.next');
+		var prev = mcPizzaInner.find('.prev');
+		var nextNext = mcPizzaInner.find('.nextNext');
+		var prevPrev = mcPizzaInner.find('.prevPrev');
 
+		active.removeClass('activeStyle').addClass('next');
+		next.removeClass('next').addClass('nextNext');
+		prev.removeClass('prev').addClass('activeStyle');
+		nextNext.removeClass('nextNext').addClass('prevPrev');
+		prevPrev.removeClass('prevPrev').addClass('prev');
+
+		headerTextUpdate()
 	});
 
 
@@ -220,8 +251,25 @@ $(document).ready(function(){
 	},
 	function(){
 		$(this).next().next().css('display', 'none').removeClass('animated');
-	})
+	});
 
+
+	//map zoom enable/disable
+	$('.map').click(function () {
+		$('.map iframe').css("pointer-events", "auto");
+	});
+
+	$( ".map" ).mouseleave(function() {
+		$('.map iframe').css("pointer-events", "none");
+	});
+
+
+	var carouselInterval = window.setInterval(function(){
+		nextSlide();
+	},carouselIntervalTiming);
+
+
+	//todo initialize dynamic map with keyAPI in here
 
 });
 
