@@ -208,7 +208,7 @@ $(document).ready(function(){
 	$('button.nextBtn').click(function(){
 		nextSlide();
 		clearInterval(carouselInterval);
-		carouselInterval = window.setInterval(nextSlide(), carouselIntervalTiming);
+		carouselInterval = window.setInterval(function(){nextSlide();},carouselIntervalTiming);
 	});
 
 	$('button.prevBtn').click(function(){
@@ -224,7 +224,7 @@ $(document).ready(function(){
 		nextNext.removeClass('nextNext').addClass('prevPrev');
 		prevPrev.removeClass('prevPrev').addClass('prev');
 
-		headerTextUpdate()
+		headerTextUpdate();
 	});
 
 

@@ -4,7 +4,7 @@ html
 		meta(charset='utf-8')
 		meta(name='viewport' content='width=device-width, initial-scale=1')
 
-		title Napolitano.com
+		title Napoletano.com
 
 		script(type='text/javascript' src='_assets/lib/jquery.min.js')
 		script(type='text/javascript' src='_assets/lib/bootstrap-3.3.7-dist/js/bootstrap.min.js')
@@ -14,45 +14,52 @@ html
 		link(rel='stylesheet' type='text/css' href='_assets/lib/normalize.css')
 		link(rel='stylesheet' type='text/css' href='_assets/lib/bootstrap-3.3.7-dist/css/bootstrap.min.css')
 		link(rel='stylesheet' type='text/css' href='_assets/lib/animateEdited.css')
+		link(href="https://fonts.googleapis.com/css?family=Niconne" rel="stylesheet")
 		//link(rel='stylesheet' type='text/css' href='_assets/lib/slick/slick.css')
 		//link(rel='stylesheet' type='text/css' href='_assets/lib/slick/slick-theme.css')
 		link(rel='stylesheet' type='text/css' href='_styles/stylesheet.css')
-		//todo on deployment only use minified files and customize bootsrap
+		//todo on deployment only use minified files and customize bootstrap
 
 		include _pug/variables.jade
 
 	body
 		.container-fluid
-			.sidebar.col-md-2
+			.sidebar.col-md-2.col-sm-12.col-xs-12
 				.logo.col-md-12.col-xs-12.col-sm-12
 					img(src="_assets/img/images/NapolitanoLogo.png" width= '200px')
-				nav.col-md-12.col-xs-12.col-sm-12
-					img.ribbon(src='_assets/img/elements/ribbon.png' width='140px').center-block
-					ul.col-xs-12
+				nav.col-md-12.col-xs-12.col-sm-12.center-block
+					img.ribbon(src='_assets/img/elements/ribbon.png' width='180px')
+					ul.col-xs-12.col-md-12
 						li.col-xs-4.col-md-12.col-sm-12
-							a(href="#pizzaCarousel").scroll-on-page-link Our Best Dishes
+							a(href="#pizzaCarousel").scroll-on-page-link Best Dishes
 						li.col-xs-4.col-md-12.col-sm-12
 							a(href="#orderOnline").scroll-on-page-link Order Online
 						li.col-xs-4.col-md-12.col-sm-12
 							a(href="#contactUs").scroll-on-page-link Contact us
 			header.col-md-10.col-sm-12.col-xs-12
 				#pizzaCarousel
-					.mcPizza-inner.center-block
-						button.prevBtn
+					.mcPizza-inner.center-block.col-xs-12.col-sm-12.col-md-12
+						button.prevBtn(aria-label="Previous")
 							span.glyphicon.glyphicon-chevron-left
+						//add alt attribute to each image in the carousel
 						.item.activeStyle
 							img(src='_assets/img/images/pepperoni-pizza.png' width= carouselItemWidth height= carouselItemHeight alt="Pepperoni Pizza")
+							.shadow.center-block
 						.item.next
 							img(src='_assets/img/images/quttro_stegioni-pizza.png' width= carouselItemWidth height= carouselItemHeight alt="Guttro Stegioni Pizza")
+							.shadow
 						.item.nextNext
 							img(src='_assets/img/images/pepperoni-pizza.png' width= carouselItemWidth height= carouselItemHeight alt="Pepperoni Pizza")
+							.shadow
 						.item.prevPrev
 							img(src='_assets/img/images/quttro_stegioni-pizza.png' width= carouselItemWidth height= carouselItemHeight alt="Guttro Stegioni Pizza")
+							.shadow
 						.item.prev
 							img(src='_assets/img/images/pepperoni-pizza.png' width= carouselItemWidth height= carouselItemHeight alt="Pepperoni Pizza")
+							.shadow
 						button.nextBtn(aria-label="Next")
 							span.glyphicon.glyphicon-chevron-right
-				h2.headerText Did you taste our
+				h2.headerText.col-xs-12 Did you taste our
 					span.dish  Pepperoni Pizza
 					|  ?!
 				h3.callUsText Call us on 02-5559744
@@ -103,7 +110,7 @@ html
 							img(src='_assets/img/elements/twitter.png' width='40px')
 						a.icon(href='#')
 							img(src='_assets/img/elements/instagram.png' width='30px')
-
+						//todo add facebook
 					p.copyrights
 						span.glyphicon.glyphicon-copyright-mark
 						|  Designed by

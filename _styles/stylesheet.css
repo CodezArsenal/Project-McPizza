@@ -11,7 +11,8 @@
 .container-fluid {
   padding: 0;
   margin: 0;
-  background-image: radial-gradient(closest-side, #FF7F32, #e60000 750px); }
+  background-image: url("../_assets/img/elements/noise.png"), -webkit-radial-gradient(top center, #f7931e, #f15a24 750px);
+  background-attachment: fixed; }
 
 .sidebar .logo {
   padding: 30px;
@@ -21,49 +22,55 @@
     position: absolute;
     left: 50%;
     transform: translateX(-50%); }
-.sidebar nav {
-  position: relative;
-  padding: 20px; }
-  .sidebar nav ul {
-    padding: 0;
-    margin: 0;
-    list-style: none;
-    font-size: 14px;
-    font-family: "Snell Roundhand";
-    font-weight: bolder;
-    position: absolute;
+.sidebar nav img.ribbon {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%); }
+.sidebar nav ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  font-size: 22px;
+  font-family: "Niconne", cursive;
+  font-weight: lighter;
+  position: absolute;
+  left: 0;
+  transform: translateY(55%);
+  text-decoration: none;
+  text-align: center; }
+  .sidebar nav ul li {
+    margin: 20px 0;
+    text-align: center; }
+  .sidebar nav ul a {
     text-decoration: none;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    top: 40%; }
-    .sidebar nav ul li {
-      margin: 20px 0;
-      text-align: center; }
-    .sidebar nav ul a {
-      text-decoration: none;
-      color: #e60000; }
-    .sidebar nav ul a:hover {
-      text-decoration: none;
-      font-size: 1.3em; }
-    .sidebar nav ul a:visited {
-      text-decoration: none; }
+    color: #e60000;
+    display: block; }
+  .sidebar nav ul a:hover {
+    text-decoration: none;
+    font-size: 1.3em; }
+  .sidebar nav ul a:visited {
+    text-decoration: none; }
 
 @media (max-width: 768px) {
   .sidebar .logo {
     padding: 0;
-    margin: 30px 0; }
+    margin: 30px 0 10px 0; }
   .sidebar nav {
-    display: block; }
+    display: block;
+    position: relative;
+    padding: 0; }
     .sidebar nav img.ribbon {
       display: none; }
     .sidebar nav ul {
       display: block;
-      padding: 20px 0; }
+      position: static;
+      padding: 0;
+      top: 0;
+      transform: translateY(0); }
       .sidebar nav ul li {
         display: inline-block;
         margin: 0;
+        padding: 0;
         float: left;
         font-size: 22px; } }
 header {
@@ -71,10 +78,10 @@ header {
   header .headerText {
     padding: 15px;
     margin: 50px 0 30px 0;
-    font-family: "Snell Roundhand";
-    font-size: 46px;
+    font-family: "Niconne", cursive;
     font-weight: lighter;
-    text-align: center; }
+    text-align: center;
+    font-size: 50px; }
     header .headerText span {
       font-weight: bold; }
   header .callUsText {
@@ -86,75 +93,99 @@ header {
 @media (max-width: 768px) {
   header {
     margin: 0; }
+    header .headerText {
+      padding: 0;
+      margin: 0;
+      height: auto; }
     header .callUsText {
       font-size: 28px; } }
-#pizzaCarousel {
-  height: 400px; }
-  #pizzaCarousel .mcPizza-inner {
-    width: 900px;
-    padding: 100px 10px;
-    height: 400px;
+#pizzaCarousel .mcPizza-inner {
+  width: 900px;
+  padding: 100px 10px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  -ms-flex-direction: row;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: flex-start; }
+  #pizzaCarousel .mcPizza-inner .item {
+    position: relative; }
+    #pizzaCarousel .mcPizza-inner .item img {
+      filter: blur(3px);
+      box-shadow: 0px 50px 100px -60px black; }
+  #pizzaCarousel .mcPizza-inner .prevPrev {
+    order: 1;
+    left: 15%;
+    z-index: 8; }
+  #pizzaCarousel .mcPizza-inner .prev {
+    order: 2;
     position: relative;
-    overflow: hidden;
-    display: flex;
-    -ms-flex-direction: row;
-    -webkit-flex-direction: row;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: flex-start; }
-    #pizzaCarousel .mcPizza-inner .item {
-      position: relative; }
-      #pizzaCarousel .mcPizza-inner .item img {
-        filter: blur(3px); }
-    #pizzaCarousel .mcPizza-inner .prevPrev {
-      order: 1;
-      left: 15%;
-      z-index: 8; }
-    #pizzaCarousel .mcPizza-inner .prev {
-      order: 2;
+    top: 265%;
+    left: 10%;
+    z-index: 9; }
+  #pizzaCarousel .mcPizza-inner .item.activeStyle {
+    order: 3;
+    z-index: 10;
+    position: relative; }
+    #pizzaCarousel .mcPizza-inner .item.activeStyle img {
+      width: 380px;
+      height: 300px;
+      filter: none;
+      position: relative;
       top: 25%;
-      left: 10%;
-      z-index: 9; }
-    #pizzaCarousel .mcPizza-inner .item.activeStyle {
-      order: 3;
-      z-index: 10;
-      position: relative; }
-      #pizzaCarousel .mcPizza-inner .item.activeStyle img {
-        width: 380px;
-        height: 300px;
-        filter: none;
-        position: relative;
-        top: 25%; }
-    #pizzaCarousel .mcPizza-inner .next {
-      order: 4;
-      top: 25%;
-      left: -10%;
-      z-index: 9; }
-    #pizzaCarousel .mcPizza-inner .nextNext {
-      order: 5;
-      left: -15%;
-      z-index: 8; }
-    #pizzaCarousel .mcPizza-inner button.nextBtn, #pizzaCarousel .mcPizza-inner button.prevBtn {
-      position: absolute;
-      top: 75%;
-      width: 40px;
-      height: 40px;
-      padding: 0;
-      cursor: pointer;
-      border-radius: 100%;
-      border: none;
-      background-color: transparent; }
-      #pizzaCarousel .mcPizza-inner button.nextBtn span, #pizzaCarousel .mcPizza-inner button.prevBtn span {
-        font-size: 2em; }
-    #pizzaCarousel .mcPizza-inner button.nextBtn {
-      right: 150px; }
-    #pizzaCarousel .mcPizza-inner button.prevBtn {
-      left: 150px; }
-    #pizzaCarousel .mcPizza-inner button.nextBtn:focus, #pizzaCarousel .mcPizza-inner button.prevBtn:focus {
-      outline: none !important; }
-    #pizzaCarousel .mcPizza-inner button.nextBtn:hover, #pizzaCarousel .mcPizza-inner button.prevBtn:hover {
-      font-size: 1.5em; }
+      box-shadow: -20px 205px 60px -130px rgba(0, 0, 0, 0.5); }
+  #pizzaCarousel .mcPizza-inner .next {
+    order: 4;
+    top: 25%;
+    left: -10%;
+    z-index: 9; }
+  #pizzaCarousel .mcPizza-inner .nextNext {
+    order: 5;
+    left: -15%;
+    z-index: 8; }
+  #pizzaCarousel .mcPizza-inner button.nextBtn, #pizzaCarousel .mcPizza-inner button.prevBtn {
+    position: absolute;
+    top: 55%;
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    cursor: pointer;
+    border-radius: 100%;
+    border: none;
+    background-color: transparent; }
+    #pizzaCarousel .mcPizza-inner button.nextBtn span, #pizzaCarousel .mcPizza-inner button.prevBtn span {
+      font-size: 2em; }
+  #pizzaCarousel .mcPizza-inner button.nextBtn {
+    right: 150px; }
+  #pizzaCarousel .mcPizza-inner button.prevBtn {
+    left: 150px; }
+  #pizzaCarousel .mcPizza-inner button.nextBtn:focus, #pizzaCarousel .mcPizza-inner button.prevBtn:focus {
+    outline: none !important; }
+  #pizzaCarousel .mcPizza-inner button.nextBtn:hover, #pizzaCarousel .mcPizza-inner button.prevBtn:hover {
+    font-size: 1.5em; }
 
+@media (max-width: 768px) {
+  #pizzaCarousel .mcPizza-inner {
+    padding: 0;
+    width: 100%; }
+    #pizzaCarousel .mcPizza-inner .item.activeStyle {
+      width: 100%; }
+      #pizzaCarousel .mcPizza-inner .item.activeStyle img {
+        width: 100%; }
+    #pizzaCarousel .mcPizza-inner .prevPrev, #pizzaCarousel .mcPizza-inner .prev, #pizzaCarousel .mcPizza-inner .next, #pizzaCarousel .mcPizza-inner .nextNext {
+      display: none; }
+    #pizzaCarousel .mcPizza-inner button.nextBtn, #pizzaCarousel .mcPizza-inner button.prevBtn {
+      z-index: 12;
+      height: 100%;
+      top: 0; }
+    #pizzaCarousel .mcPizza-inner button.nextBtn {
+      right: 0; }
+    #pizzaCarousel .mcPizza-inner button.prevBtn {
+      left: 0; }
+    #pizzaCarousel .mcPizza-inner button.nextBtn:hover, #pizzaCarousel .mcPizza-inner button.prevBtn:hover {
+      font-size: 1em; } }
 .scroll-on-page-link {
   display: block;
   outline: none; }
@@ -178,7 +209,7 @@ section.callOuts {
       section.callOuts .ad img {
         position: relative; } }
 section.orderOnline {
-  height: 1600px; }
+  padding: 40px 0; }
   section.orderOnline ul li {
     list-style: none; }
   section.orderOnline ul#menu {

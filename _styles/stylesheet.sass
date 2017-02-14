@@ -23,31 +23,39 @@ $phoneBreakPoint: '768px'
 .container-fluid
   padding: 0
   margin: 0
-  //background-image: radial-gradient(closest-side, #f7931e, #f15a24 750px)
-  background-image: radial-gradient(closest-side, #FF7F32, #e60000 750px)
-
+  background-image: url('../_assets/img/elements/noise.png'), -webkit-radial-gradient(top center , #f7931e, #f15a24 750px)
+  //background-image: url('../_assets/img/elements/noise.png'), radial-gradient(closest-side, #FF7F32, #e60000 750px)
+  background-attachment: fixed
+  //background: linear-gradient(to right, #e60000, #FF7F32, rgba(230,0,0, 2))
 
 .sidebar
   .logo
     padding: 30px
     position: relative
     height: 150px
+    //+center-h()
     img
       +center-h()
   nav
-    position: relative
-    padding: 20px
+    //position: relative
+    //padding: 20px
+
+    img.ribbon
+      +center-h()
     ul
       padding: 0
       margin: 0
       list-style: none
-      font-size: 14px
-      font-family: "Snell Roundhand"
-      font-weight: bolder
+      font-size: 22px
+      //font-family: "Snell Roundhand"
+      font-family: 'Niconne', cursive
+      font-weight: lighter
       position: absolute
+      left: 0
+      transform: translateY(55%)
       text-decoration: none
-      +center()
-      top: 40%
+      text-align: center
+      //+center-h()
       li
         margin: 20px 0
         text-align: center
@@ -55,6 +63,7 @@ $phoneBreakPoint: '768px'
       a
         text-decoration: none
         color: $redDark
+        display: block
       a:hover
         text-decoration: none
         font-size: 1.3em
@@ -65,20 +74,26 @@ $phoneBreakPoint: '768px'
   .sidebar
     .logo
       padding: 0
-      margin: 30px 0
+      margin: 30px 0 10px 0
     nav
       display: block
+      position: relative
+      padding: 0
       img.ribbon
         display: none
       ul
         display: block
-        //position: static
-        padding: 20px 0
+        position: static
+        padding: 0
+        top: 0
+        transform: translateY(0)
         li
           display: inline-block
           margin: 0
+          padding: 0
           float: left
           font-size: 22px
+
 
 
 header
@@ -86,10 +101,11 @@ header
   .headerText
     padding: 15px
     margin: 50px 0 30px 0
-    font-family: "Snell Roundhand"
-    font-size: 46px 
+    //font-family: "Snell Roundhand"
+    font-family: 'Niconne', cursive
     font-weight: lighter
     text-align: center
+    font-size: 50px
     span
       font-weight: bold
   .callUsText
@@ -101,19 +117,19 @@ header
 @media (max-width: $phoneBreakPoint)
   header
     margin: 0
+    .headerText
+      padding: 0
+      margin: 0
+      height: auto
     .callUsText
       font-size: 28px
 
 
 
-
-//todo put shadows under carousel elements
 #pizzaCarousel
-  height: 400px
   .mcPizza-inner
     width: 900px
     padding: 100px 10px
-    height: 400px
     position: relative
     overflow: hidden
 
@@ -128,6 +144,7 @@ header
       position: relative
       img
         filter: blur(3px)
+        box-shadow:  0px 50px 100px -60px rgba(0,0,0,1)
 
     .prevPrev
       order: 1
@@ -135,7 +152,8 @@ header
       z-index: 8
     .prev
       order: 2
-      top: 25%
+      position: relative
+      top: 265%
       left: 10%
       z-index: 9
     .item.activeStyle
@@ -148,6 +166,7 @@ header
         filter: none
         position: relative
         top: 25%
+        box-shadow:  -20px 205px 60px -130px rgba(0, 0, 0, 0.5)
     .next
       order: 4
       top: 25%
@@ -161,7 +180,7 @@ header
     //navigation buttons
     button.nextBtn, button.prevBtn
       position: absolute
-      top: 75%
+      top: 55%
 
       width: 40px
       height: 40px
@@ -181,6 +200,30 @@ header
       outline: none !important
     button.nextBtn:hover, button.prevBtn:hover
       font-size: 1.5em
+
+@media (max-width: $phoneBreakPoint)
+  #pizzaCarousel
+    .mcPizza-inner
+      padding: 0
+      width: 100%
+      .item.activeStyle
+        width: 100%
+        img
+          width: 100%
+      .prevPrev, .prev, .next, .nextNext
+        display: none
+      button.nextBtn, button.prevBtn
+        z-index: 12
+        height: 100%
+        top: 0
+      button.nextBtn
+        right: 0
+      button.prevBtn
+        left: 0
+      button.nextBtn:hover, button.prevBtn:hover
+        font-size: 1em
+
+
 
 
 
@@ -206,8 +249,7 @@ section.callOuts
         position: relative
 
 section.orderOnline
-  height: 1600px
-  //background-color: #8c8c8c
+  padding: 40px 0
   ul
     li
       list-style: none
@@ -238,6 +280,7 @@ section.orderOnline
       -o-transform: skew(-20deg)
       transform: skew(-20deg)
       position: relative
+
       span
         background-image: radial-gradient(closest-side, #FF7F32, #e60000 750px)
         background-attachment: fixed
