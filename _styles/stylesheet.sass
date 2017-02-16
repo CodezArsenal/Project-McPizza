@@ -73,8 +73,14 @@ $phoneBreakPoint: '768px'
 @media (max-width: $phoneBreakPoint)
   .sidebar
     .logo
+      height: auto
       padding: 0
       margin: 30px 0 10px 0
+      img
+        position: static
+        -webkit-transform: translateX(0)
+        display: block
+        margin: auto
     nav
       display: block
       position: relative
@@ -84,7 +90,7 @@ $phoneBreakPoint: '768px'
       ul
         display: block
         position: static
-        padding: 0
+        padding: 20px 0
         top: 0
         transform: translateY(0)
         li
@@ -93,7 +99,8 @@ $phoneBreakPoint: '768px'
           padding: 0
           float: left
           font-size: 22px
-
+          a:hover
+            font-size: 1em
 
 
 header
@@ -281,18 +288,21 @@ section.orderOnline
       transform: skew(-20deg)
       position: relative
 
-      span
+      span.categoryName
         background-image: radial-gradient(closest-side, #FF7F32, #e60000 750px)
         background-attachment: fixed
         -webkit-text-fill-color: transparent
         -webkit-background-clip: text
         display: block
         //todo text shouldn't be skewed
-        position: relative
-        top: 50%
-        left: 50%
-        transform: translate(-50%, -15%)
-      //todo text-shadow: 0 1px 0 black inset
+        //position: relative
+        //top: 50%
+        //left: 50%
+        //transform: translate(-50%, -15%)
+        //todo text-shadow: 0 1px 0 black inset
+
+      span.glyphicon.glyphicon-chevron-down
+        display: none
 
     li.meal
       //todo edit the fonts
@@ -312,55 +322,21 @@ section.orderOnline
       display: block
     .categoryList
       padding: 0
+      float: none
+      h3
+        position: relative
+        left: 50%
+        -webkit-transform: translateX(-50%)
+        span.categoryName
+          display: inline-block
+        span.glyphicon.glyphicon-chevron-down
+          display: inline-block
       li.meal, li.price, li.ingredients
         display: none
     .categoryList:hover li.meal, .categoryList:hover li.price
       display: inline-block
     .categoryList:hover li.price
       float: right
-
-
-    h3
-      display: inline-block
-      background-color: white
-      padding: 0 10px
-      color: transparent
-      font-family: Impact
-      font-variant: small-caps
-      font-size: 32px
-      box-shadow: 0 1px 1px 1px black
-      -webkit-transform: skew(-20deg)
-      -moz-transform: skew(-20deg)
-      -o-transform: skew(-20deg)
-      transform: skew(-20deg)
-      position: relative
-      span
-        background-image: radial-gradient(closest-side, #FF7F32, #e60000 750px)
-        background-attachment: fixed
-        -webkit-text-fill-color: transparent
-        -webkit-background-clip: text
-        display: block
-        //todo text shouldn't be skewed
-        position: relative
-        top: 50%
-        left: 50%
-        transform: translate(-50%, -15%)
-        //todo text-shadow: 0 1px 0 black inset
-
-
-
-    li.meal
-      //todo edit the fonts
-      span.glyphicon
-        padding: 5px
-
-    li.price
-
-    li.ingredients
-      display: none
-      padding: 5px 15px 10px 30px
-
-
 
 
 

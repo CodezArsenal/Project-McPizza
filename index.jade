@@ -73,12 +73,13 @@ html
 					img(src="http://placehold.it/200x150" width= adWidth height= adHeight)
 			section#orderOnline.orderOnline.col-md-12.col-sm-12.col-xs-12
 				script#handlebarsTemp(type='text/handlebars-template')
-					ul#menu
+					ul#menu.col-xs-12
 						| {{#menu}}
-						li
-							ul(id='{{category}}').categoryList
+						li.col-xs-12
+							ul(id='{{category}}').categoryList.col-xs-12.center-block
 								h3
-									span {{category}}
+									span.categoryName {{category}}
+									//span.glyphicon.glyphicon-chevron-down
 								| {{#dishes}}
 								li
 								li.meal.col-md-7
