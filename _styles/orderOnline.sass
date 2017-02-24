@@ -1,0 +1,79 @@
+section.orderOnline
+	padding: 40px 0
+	ul
+	li
+		list-style: none
+	ul#menu
+	display: flex
+	-ms-flex-direction: row
+	-webkit-flex-direction: row
+	flex-direction: row
+	justify-content: space-between
+	align-items: flex-start
+	-ms-flex-wrap: wrap
+	-webkit-flex-wrap: wrap
+	flex-wrap: wrap
+
+	.categoryList
+		padding: 20px 0
+		width: 300px
+	h3
+		display: inline-block
+		background-color: white
+		padding: 0 10px
+		color: transparent
+		font-family: Impact
+		font-variant: small-caps
+		font-size: 32px
+		box-shadow: 0 1px 1px 1px black
+		-webkit-transform: skew(-20deg)
+		-moz-transform: skew(-20deg)
+		-o-transform: skew(-20deg)
+		transform: skew(-20deg)
+		position: relative
+
+		span.categoryName
+			background-image: radial-gradient(closest-side, #FF7F32, #e60000 750px)
+			background-attachment: fixed
+			-webkit-text-fill-color: transparent
+			-webkit-background-clip: text
+			display: block
+			//todo text shouldn't be skewed
+			//todo text-shadow: 0 1px 0 black inset
+
+		span.glyphicon.glyphicon-chevron-down
+			display: none
+
+	li.meal
+		//todo edit the fonts
+		span.glyphicon
+		padding: 5px
+
+	li.ingredients
+		display: none
+		padding: 5px 15px 10px 30px
+
+@media (max-width: $phoneBreakPoint)
+	section.orderOnline
+		height: auto
+	ul#menu
+		margin: 0
+		padding: 0
+		display: block
+	.categoryList
+		padding: 0
+		float: none
+		h3
+		position: relative
+		left: 50%
+		-webkit-transform: translateX(-50%)
+		span.categoryName
+			display: inline-block
+		span.glyphicon.glyphicon-chevron-down
+			display: inline-block
+		li.meal, li.price, li.ingredients
+		display: none
+	.categoryList:hover li.meal, .categoryList:hover li.price
+		display: inline-block
+	.categoryList:hover li.price
+		float: right

@@ -1,0 +1,96 @@
+#pizzaCarousel
+  .mcPizza-inner
+    width: 900px
+    padding: 100px 10px
+    position: relative
+    overflow: hidden
+
+    display: flex
+    -ms-flex-direction: row
+    -webkit-flex-direction: row
+    flex-direction: row
+    justify-content: space-around
+    align-items: flex-start
+
+    .item
+      position: relative
+      img
+        filter: blur(3px)
+        box-shadow:  0px 50px 100px -60px rgba(0,0,0,1)
+
+    .prevPrev
+      order: 1
+      left: 15%
+      z-index: 8
+    .prev
+      order: 2
+      position: relative
+      top: 265%
+      left: 10%
+      z-index: 9
+    .item.activeStyle
+      order: 3
+      z-index: 10
+      position: relative
+      img
+        width: 380px
+        height: 300px
+        filter: none
+        position: relative
+        top: 25%
+        box-shadow:  -20px 205px 60px -130px rgba(0, 0, 0, 0.5)
+    .next
+      order: 4
+      top: 25%
+      left: -10%
+      z-index: 9
+    .nextNext
+      order: 5
+      left: -15%
+      z-index: 8
+
+    //navigation buttons
+    button.nextBtn, button.prevBtn
+      position: absolute
+      top: 55%
+
+      width: 40px
+      height: 40px
+      padding: 0
+      cursor: pointer
+      border-radius: 100%
+      border: none
+      background-color: transparent
+      span
+        font-size: 2em
+
+    button.nextBtn
+      right: 150px
+    button.prevBtn
+      left: 150px
+    button.nextBtn:focus, button.prevBtn:focus
+      outline: none !important
+    button.nextBtn:hover, button.prevBtn:hover
+      font-size: 1.5em
+
+@media (max-width: $phoneBreakPoint)
+  #pizzaCarousel
+    .mcPizza-inner
+      padding: 0
+      width: 100%
+      .item.activeStyle
+        width: 100%
+        img
+          width: 100%
+      .prevPrev, .prev, .next, .nextNext
+        display: none
+      button.nextBtn, button.prevBtn
+        z-index: 12
+        height: 100%
+        top: 0
+      button.nextBtn
+        right: 0
+      button.prevBtn
+        left: 0
+      button.nextBtn:hover, button.prevBtn:hover
+        font-size: 1em

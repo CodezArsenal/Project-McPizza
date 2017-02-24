@@ -1,0 +1,18 @@
+section#orderOnline.orderOnline.col-md-12.col-sm-12.col-xs-12
+   script#handlebarsTemp(type='text/handlebars-template')
+      ul#menu.col-xs-12
+         | {{#menu}}
+         li.col-xs-12
+            ul(id='{{category}}').categoryList.col-xs-12.center-block
+               h3
+                  span.categoryName {{category}}
+                  //span.glyphicon.glyphicon-chevron-down
+               | {{#dishes}}
+               li
+               li.meal.col-md-7
+                  span.addBtn.glyphicon.glyphicon-plus
+                  | {{name}}
+               li.price.col-md-5 {{price}} Dhs
+               li.ingredients.col-md-12.slideInDown  {{ingredients}}
+               | {{/dishes}}
+         | {{/menu}}

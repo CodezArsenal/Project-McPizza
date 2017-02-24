@@ -1,0 +1,94 @@
+footer.col-md-12, footer.col-sm-12
+	padding: 0
+footer
+	padding: 0
+	height: 450px
+	overflow: hidden
+	.map
+		padding: 0
+		iframe
+			pointer-events: none
+			width: 100%
+			height: 450px
+	.contactUs
+		padding: 10px 0 25px
+		height: 450px
+		background-color: $greyDark
+		.contactUsTitle
+			color: white
+			font-family: Impact, sans-serif
+			letter-spacing: 1.5px
+			font-size: 2.5em
+			//padding: 0 20px
+			.icon
+				width: 70px
+				margin: 0 20px 0 30px
+		.landline
+			margin: 5px 30px 5px 120px
+		.contactUsText
+			color: white
+			font-family: Gurmukhi MN, sans-serif
+			font-weight: lighter
+			font-size: 20px
+			margin: 5px 30px 5px 120px
+			position: relative
+		//todo change to a suitable font
+
+		.contactUsBreak
+			border-bottom: 1px solid #95989A
+			margin: 15px 0 15px 120px
+			width: 250px
+		.contactUsBreak:nth-child(2)
+		//margin-bottom: 10px
+		//todo edith margins like mockup
+		.socialMedia
+			padding: 0 60px
+			.icon
+				float: right
+				padding: 5px
+		p.copyrights:hover
+			color: white
+		p.copyrights
+			font-family: "Gurmukhi MN"
+			font-size: 12px
+			position: absolute
+			bottom: 0
+			left: 0
+			background-color: black
+			width: 100%
+			opacity: .5
+			color: grey
+			text-align: center
+			margin: 0
+			a
+				text-decoration: none
+				color: inherit
+			a:hover
+				text-decoration: none
+
+@media (max-width: $phoneBreakPoint)
+	footer
+		height: auto
+		.map
+			height: 370px
+			iframe
+				height: 370px
+		.contactUs
+			height: auto
+			padding: 0
+			.contactUsBreak, .landline, .email, .contactUsText
+				margin: 15px 30px 10px 60px
+			p.copyrights
+				background-color: black
+				position: absolute
+				left: 0
+				bottom: 0
+				margin: 0
+				width: 100%
+				opacity: .5
+				color: grey
+				text-align: center
+			.socialMedia
+				padding: 0 30px
+				.icon
+					margin: 15px 0 40px 0

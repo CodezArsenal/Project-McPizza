@@ -1,0 +1,27 @@
+header.col-md-10.col-sm-12.col-xs-12
+   #pizzaCarousel
+      .mcPizza-inner.center-block.col-xs-12.col-sm-12.col-md-12
+         button.prevBtn(aria-label="Previous")
+            span.glyphicon.glyphicon-chevron-left
+         //add alt attribute to each image in the carousel
+         .item.activeStyle
+            img(src='_assets/img/images/pepperoni-pizza.png' width= carouselItemWidth height= carouselItemHeight alt="Pepperoni Pizza")
+            .shadow.center-block
+         .item.next
+            img(src='_assets/img/images/quttro_stegioni-pizza.png' width= carouselItemWidth height= carouselItemHeight alt="Guttro Stegioni Pizza")
+            .shadow
+         .item.nextNext
+            img(src='_assets/img/images/pepperoni-pizza.png' width= carouselItemWidth height= carouselItemHeight alt="Pepperoni Pizza")
+            .shadow
+         .item.prevPrev
+            img(src='_assets/img/images/quttro_stegioni-pizza.png' width= carouselItemWidth height= carouselItemHeight alt="Guttro Stegioni Pizza")
+            .shadow
+         .item.prev
+            img(src='_assets/img/images/pepperoni-pizza.png' width= carouselItemWidth height= carouselItemHeight alt="Pepperoni Pizza")
+            .shadow
+         button.nextBtn(aria-label="Next")
+            span.glyphicon.glyphicon-chevron-right
+   h2.headerText.col-xs-12 Did you taste our
+      span.dish  Pepperoni Pizza
+      |  ?!
+   h3.callUsText Call us on 02-5559744

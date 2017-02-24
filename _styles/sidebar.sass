@@ -1,0 +1,75 @@
+.scroll-on-page-link
+  display: block
+  outline: none
+
+
+.sidebar
+  .logo
+    padding: 30px
+    position: relative
+    height: 150px
+    //+center-h()
+    img
+      +center-h()
+  nav
+    img.ribbon
+      +center-h()
+    ul
+      padding: 0
+      margin: 0
+      list-style: none
+      font-size: 22px
+      //font-family: "Snell Roundhand"
+      font-family: 'Niconne', cursive
+      font-weight: lighter
+      position: absolute
+      left: 0
+      transform: translateY(55%)
+      text-decoration: none
+      text-align: center
+      //+center-h()
+      li
+        margin: 20px 0
+        text-align: center
+      li:hover
+      a
+        text-decoration: none
+        color: $redDark
+        display: block
+      a:hover
+        text-decoration: none
+        font-size: 1.3em
+      a:visited
+        text-decoration: none
+
+@media (max-width: $phoneBreakPoint)
+  .sidebar
+    .logo
+      height: auto
+      padding: 0
+      margin: 30px 0 10px 0
+      img
+        position: static
+        -webkit-transform: translateX(0)
+        display: block
+        margin: auto
+    nav
+      display: block
+      position: relative
+      padding: 0
+      img.ribbon
+        display: none
+      ul
+        display: block
+        position: static
+        padding: 20px 0
+        top: 0
+        transform: translateY(0)
+        li
+          display: inline-block
+          margin: 0
+          padding: 0
+          float: left
+          font-size: 22px
+          a:hover
+            font-size: 1em
